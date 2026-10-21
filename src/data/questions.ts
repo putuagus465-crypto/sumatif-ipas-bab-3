@@ -1,8 +1,8 @@
 import { Question } from '../types';
 
-// SVG Visual Assets for Questions (Data URIs for flawless offline rendering and sharp printing)
+// High quality educational SVG Visual Assets for Questions
 const SVG_ICONS = {
-  // Bagan Siklus Hidup Manusia
+  // Bagan Siklus Hidup Manusia (6 Tahap Lengkap)
   siklusHidup: `data:image/svg+xml;utf8,${encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" width="100%" height="100%">
       <rect width="640" height="180" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
@@ -14,219 +14,173 @@ const SVG_ICONS = {
         <text x="52.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">1. Bayi</text>
         <text x="52.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">0 - 1 Tahun</text>
         
-        <path d="M 100 70 L 120 70" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
-        
         <!-- Tahap 2: Balita -->
-        <rect x="125" y="20" width="85" height="100" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-        <circle cx="167.5" cy="55" r="20" fill="#bbf7d0"/>
-        <text x="167.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">🧒</text>
-        <text x="167.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">2. Balita</text>
-        <text x="167.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">1 - 5 Tahun</text>
+        <rect x="115" y="20" width="85" height="100" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+        <circle cx="157.5" cy="55" r="20" fill="#bbf7d0"/>
+        <text x="157.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">🧒</text>
+        <text x="157.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">2. Balita</text>
+        <text x="157.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">1 - 5 Tahun</text>
         
         <!-- Tahap 3: Anak-anak -->
-        <rect x="235" y="20" width="95" height="100" rx="12" fill="#fefce8" stroke="#eab308" stroke-width="2"/>
-        <circle cx="282.5" cy="55" r="20" fill="#fef08a"/>
-        <text x="282.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">👦</text>
-        <text x="282.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">3. Anak-anak</text>
-        <text x="282.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">6 - 11 Tahun</text>
+        <rect x="220" y="20" width="95" height="100" rx="12" fill="#fefce8" stroke="#eab308" stroke-width="2"/>
+        <circle cx="267.5" cy="55" r="20" fill="#fef08a"/>
+        <text x="267.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">👦</text>
+        <text x="267.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">3. Anak-anak</text>
+        <text x="267.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">6 - 11 Tahun</text>
         
         <!-- Tahap 4: Remaja -->
-        <rect x="355" y="20" width="85" height="100" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
-        <circle cx="397.5" cy="55" r="20" fill="#e9d5ff"/>
-        <text x="397.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">🧑</text>
-        <text x="397.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">4. Remaja</text>
-        <text x="397.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">12 - 18 Tahun</text>
+        <rect x="335" y="20" width="85" height="100" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+        <circle cx="377.5" cy="55" r="20" fill="#e9d5ff"/>
+        <text x="377.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">🧑</text>
+        <text x="377.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">4. Remaja</text>
+        <text x="377.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">12 - 18 Tahun</text>
 
         <!-- Tahap 5: Dewasa -->
-        <rect x="465" y="20" width="85" height="100" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
-        <circle cx="507.5" cy="55" r="20" fill="#fed7aa"/>
-        <text x="507.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">👨</text>
-        <text x="507.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">5. Dewasa</text>
-        <text x="507.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">19 - 59 Tahun</text>
+        <rect x="440" y="20" width="85" height="100" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+        <circle cx="482.5" cy="55" r="20" fill="#fed7aa"/>
+        <text x="482.5" y="60" font-family="sans-serif" font-size="20" text-anchor="middle">👨</text>
+        <text x="482.5" y="95" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">5. Dewasa</text>
+        <text x="482.5" y="110" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">19 - 59 Tahun</text>
 
         <!-- Tahap 6: Lansia -->
-        <rect x="560" y="20" width="55" height="100" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
-        <circle cx="587.5" cy="55" r="16" fill="#e2e8f0"/>
-        <text x="587.5" y="60" font-family="sans-serif" font-size="16" text-anchor="middle">👴</text>
-        <text x="587.5" y="95" font-family="sans-serif" font-size="10" font-weight="bold" fill="#334155" text-anchor="middle">6. Lansia</text>
+        <rect x="545" y="20" width="75" height="100" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+        <circle cx="582.5" cy="55" r="16" fill="#e2e8f0"/>
+        <text x="582.5" y="60" font-family="sans-serif" font-size="16" text-anchor="middle">👴</text>
+        <text x="582.5" y="95" font-family="sans-serif" font-size="10" font-weight="bold" fill="#334155" text-anchor="middle">6. Lansia</text>
+        <text x="582.5" y="110" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">&gt;= 60 Tahun</text>
       </g>
     </svg>
   `)}`,
 
-  // Grafik Pertumbuhan Tinggi Badan Bayi sampai SD
-  grafikPertumbuhan: `data:image/svg+xml;utf8,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="100%" height="100%">
-      <rect width="520" height="220" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-      <text x="260" y="26" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">Grafik Pertambahan Tinggi Badan Andi (Usia 0 s.d. 8 Tahun)</text>
+  // Denah Ragam Ruangan di Rumah
+  denahRumah: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" width="100%" height="100%">
+      <rect width="560" height="260" rx="16" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+      <text x="280" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">Denah Tata Ruangan Rumah Sehat</text>
       
-      <!-- Sumbu Y -->
-      <line x1="60" y1="40" x2="60" y2="180" stroke="#64748b" stroke-width="2"/>
-      <!-- Sumbu X -->
-      <line x1="60" y1="180" x2="480" y2="180" stroke="#64748b" stroke-width="2"/>
-      
-      <!-- Label Y (Tinggi cm) -->
-      <text x="50" y="180" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="end">0</text>
-      <text x="50" y="145" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="end">50 cm</text>
-      <text x="50" y="110" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="end">85 cm</text>
-      <text x="50" y="75" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="end">110 cm</text>
-      <text x="50" y="45" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="end">130 cm</text>
-      
-      <!-- Grid lines horizontal -->
-      <line x1="60" y1="145" x2="480" y2="145" stroke="#f1f5f9" stroke-width="1"/>
-      <line x1="60" y1="110" x2="480" y2="110" stroke="#f1f5f9" stroke-width="1"/>
-      <line x1="60" y1="75" x2="480" y2="75" stroke="#f1f5f9" stroke-width="1"/>
-      <line x1="60" y1="45" x2="480" y2="45" stroke="#f1f5f9" stroke-width="1"/>
-      
-      <!-- Batang Bar Usia -->
-      <!-- 0 Tahun (Lahir: 50 cm) -->
-      <rect x="90" y="145" width="40" height="35" rx="4" fill="#3b82f6"/>
-      <text x="110" y="140" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8" text-anchor="middle">50 cm</text>
-      <text x="110" y="195" font-family="sans-serif" font-size="10" fill="#334155" text-anchor="middle">Lahir</text>
-      
-      <!-- 2 Tahun (85 cm) -->
-      <rect x="190" y="110" width="40" height="70" rx="4" fill="#10b981"/>
-      <text x="210" y="105" font-family="sans-serif" font-size="10" font-weight="bold" fill="#047857" text-anchor="middle">85 cm</text>
-      <text x="210" y="195" font-family="sans-serif" font-size="10" fill="#334155" text-anchor="middle">2 Thn</text>
-      
-      <!-- 5 Tahun (110 cm) -->
-      <rect x="290" y="75" width="40" height="105" rx="4" fill="#f59e0b"/>
-      <text x="310" y="70" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b45309" text-anchor="middle">110 cm</text>
-      <text x="310" y="195" font-family="sans-serif" font-size="10" fill="#334155" text-anchor="middle">5 Thn</text>
-      
-      <!-- 8 Tahun (128 cm) -->
-      <rect x="390" y="50" width="40" height="130" rx="4" fill="#8b5cf6"/>
-      <text x="410" y="45" font-family="sans-serif" font-size="10" font-weight="bold" fill="#6d28d9" text-anchor="middle">128 cm</text>
-      <text x="410" y="195" font-family="sans-serif" font-size="10" fill="#334155" text-anchor="middle">8 Thn (Kelas 3)</text>
-    </svg>
-  `)}`,
+      <!-- Garasi (Kiri Bawah) -->
+      <g transform="translate(20, 140)">
+        <rect width="160" height="100" fill="#f1f5f9" stroke="#64748b" stroke-width="2" rx="8"/>
+        <text x="80" y="42" font-family="sans-serif" font-size="24" text-anchor="middle">🚗🛵</text>
+        <text x="80" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">Garasi</text>
+        <text x="80" y="85" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Tempat Kendaraan</text>
+      </g>
 
-  // Piring Makanku Seimbang
-  giziSeimbang: `data:image/svg+xml;utf8,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 200" width="100%" height="100%">
-      <rect width="460" height="200" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-      <circle cx="160" cy="100" r="75" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
-      
-      <!-- Pembagian Isi Piringku -->
-      <!-- Makanan Pokok (Karbohidrat) -->
-      <path d="M 160 100 L 160 25 A 75 75 0 0 1 235 100 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
-      <text x="185" y="75" font-family="sans-serif" font-size="10" font-weight="bold" fill="#854d0e">Makanan Pokok</text>
-      <text x="185" y="87" font-family="sans-serif" font-size="8" fill="#a16207">(Nasi/Ubi/Jagung)</text>
-      
-      <!-- Sayuran -->
-      <path d="M 160 100 L 235 100 A 75 75 0 0 1 160 175 Z" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
-      <text x="185" y="125" font-family="sans-serif" font-size="10" font-weight="bold" fill="#166534">Sayuran</text>
-      <text x="185" y="137" font-family="sans-serif" font-size="8" fill="#15803d">(Bayam/Wortel)</text>
+      <!-- Ruang Tamu (Kiri Atas) -->
+      <g transform="translate(20, 35)">
+        <rect width="160" height="95" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" rx="8"/>
+        <text x="80" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🛋️🪴</text>
+        <text x="80" y="62" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Ruang Tamu</text>
+        <text x="80" y="79" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Menerima Kunjungan</text>
+      </g>
 
-      <!-- Lauk Pauk (Protein) -->
-      <path d="M 160 100 L 160 175 A 75 75 0 0 1 85 100 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
-      <text x="100" y="130" font-family="sans-serif" font-size="10" font-weight="bold" fill="#9a3412">Lauk Pauk</text>
-      <text x="100" y="142" font-family="sans-serif" font-size="8" fill="#c2410c">(Ikan/Telur/Tempe)</text>
-      
-      <!-- Buah-buahan -->
-      <path d="M 160 100 L 85 100 A 75 75 0 0 1 160 25 Z" fill="#fbcfe8" stroke="#db2777" stroke-width="1.5"/>
-      <text x="105" y="70" font-family="sans-serif" font-size="10" font-weight="bold" fill="#9d174d">Buah</text>
-      <text x="105" y="82" font-family="sans-serif" font-size="8" fill="#be185d">(Pisang/Pepaya)</text>
-      
-      <!-- Keterangan Samping -->
-      <g transform="translate(260, 35)">
-        <text x="0" y="15" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Konsep Isi Piringku</text>
-        <text x="0" y="35" font-family="sans-serif" font-size="10" fill="#475569">Mendukung Pertumbuhan &amp; </text>
-        <text x="0" y="48" font-family="sans-serif" font-size="10" fill="#475569">Perkembangan Tubuh Sehat:</text>
-        <circle cx="8" cy="70" r="4" fill="#ca8a04"/>
-        <text x="20" y="74" font-family="sans-serif" font-size="10" fill="#334155">Energi untuk bergerak &amp; belajar</text>
-        <circle cx="8" cy="90" r="4" fill="#16a34a"/>
-        <text x="20" y="94" font-family="sans-serif" font-size="10" fill="#334155">Vitamin dan mineral pelindung tubuh</text>
-        <circle cx="8" cy="110" r="4" fill="#ea580c"/>
-        <text x="20" y="114" font-family="sans-serif" font-size="10" fill="#334155">Protein pembangun sel dan jaringan</text>
+      <!-- Ruang Makan (Tengah Atas) -->
+      <g transform="translate(190, 35)">
+        <rect width="180" height="95" fill="#fefce8" stroke="#eab308" stroke-width="2" rx="8"/>
+        <text x="90" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🍽️🪑</text>
+        <text x="90" y="62" font-family="sans-serif" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">Ruang Makan</text>
+        <text x="90" y="79" font-family="sans-serif" font-size="9" fill="#713f12" text-anchor="middle">Makan Bersama Keluarga</text>
+      </g>
+
+      <!-- Kamar Tidur (Tengah Bawah) -->
+      <g transform="translate(190, 140)">
+        <rect width="180" height="100" fill="#fdf2f8" stroke="#ec4899" stroke-width="2" rx="8"/>
+        <text x="90" y="42" font-family="sans-serif" font-size="22" text-anchor="middle">🛏️🧸</text>
+        <text x="90" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#be185d" text-anchor="middle">Kamar Tidur</text>
+        <text x="90" y="85" font-family="sans-serif" font-size="9" fill="#9d174d" text-anchor="middle">Istirahat &amp; Tidur</text>
+      </g>
+
+      <!-- Dapur (Kanan Atas) -->
+      <g transform="translate(380, 35)">
+        <rect width="160" height="95" fill="#fff7ed" stroke="#f97316" stroke-width="2" rx="8"/>
+        <text x="80" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🍳🥘</text>
+        <text x="80" y="62" font-family="sans-serif" font-size="12" font-weight="bold" fill="#c2410c" text-anchor="middle">Dapur</text>
+        <text x="80" y="79" font-family="sans-serif" font-size="9" fill="#9a3412" text-anchor="middle">Memasak Makanan</text>
+      </g>
+
+      <!-- Kamar Mandi (Kanan Bawah) -->
+      <g transform="translate(380, 140)">
+        <rect width="160" height="100" fill="#f0fdf4" stroke="#22c55e" stroke-width="2" rx="8"/>
+        <text x="80" y="42" font-family="sans-serif" font-size="22" text-anchor="middle">🚿🧼</text>
+        <text x="80" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">Kamar Mandi</text>
+        <text x="80" y="85" font-family="sans-serif" font-size="9" fill="#166534" text-anchor="middle">Membersihkan Diri</text>
       </g>
     </svg>
   `)}`,
 
-  // Perkembangan Motorik Bayi
-  motorikBayi: `data:image/svg+xml;utf8,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="100%" height="100%">
-      <rect width="500" height="160" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
-      <text x="250" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Perkembangan Gerak (Motorik Kasar) pada Masa Bayi</text>
+  // Kerjasama dan Peran Anggota Keluarga di Rumah
+  peranKeluarga: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+      <rect width="540" height="180" rx="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+      <text x="270" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">Kerjasama &amp; Pembagian Tugas Anggota Keluarga di Rumah</text>
       
-      <!-- Step 1: Tengkurap -->
-      <g transform="translate(30, 45)">
-        <rect width="85" height="90" rx="8" fill="#ffffff" stroke="#93c5fd"/>
-        <text x="42.5" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🛌</text>
-        <text x="42.5" y="62" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">Tengkurap</text>
-        <text x="42.5" y="78" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">3-4 Bulan</text>
-      </g>
-      
-      <text x="130" y="95" font-family="sans-serif" font-size="18" fill="#3b82f6">→</text>
-      
-      <!-- Step 2: Duduk -->
-      <g transform="translate(150, 45)">
-        <rect width="85" height="90" rx="8" fill="#ffffff" stroke="#93c5fd"/>
-        <text x="42.5" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🧘</text>
-        <text x="42.5" y="62" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">Duduk</text>
-        <text x="42.5" y="78" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">6-7 Bulan</text>
-      </g>
-      
-      <text x="250" y="95" font-family="sans-serif" font-size="18" fill="#3b82f6">→</text>
-      
-      <!-- Step 3: Merangkak -->
-      <g transform="translate(270, 45)">
-        <rect width="85" height="90" rx="8" fill="#ffffff" stroke="#93c5fd"/>
-        <text x="42.5" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🚼</text>
-        <text x="42.5" y="62" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">Merangkak</text>
-        <text x="42.5" y="78" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">8-9 Bulan</text>
+      <!-- Ayah -->
+      <g transform="translate(20, 42)">
+        <rect width="115" height="120" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="57.5" y="40" font-family="sans-serif" font-size="28" text-anchor="middle">👨🔧</text>
+        <text x="57.5" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">Ayah</text>
+        <text x="57.5" y="84" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Kepala keluarga</text>
+        <text x="57.5" y="98" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Mencari nafkah &amp;</text>
+        <text x="57.5" y="110" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">merawat garasi</text>
       </g>
 
-      <text x="370" y="95" font-family="sans-serif" font-size="18" fill="#3b82f6">→</text>
-      
-      <!-- Step 4: Berdiri & Berjalan -->
-      <g transform="translate(390, 45)">
-        <rect width="85" height="90" rx="8" fill="#ffffff" stroke="#93c5fd"/>
-        <text x="42.5" y="38" font-family="sans-serif" font-size="22" text-anchor="middle">🚶</text>
-        <text x="42.5" y="62" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">Berjalan</text>
-        <text x="42.5" y="78" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">11-14 Bulan</text>
+      <!-- Ibu -->
+      <g transform="translate(150, 42)">
+        <rect width="115" height="120" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="1.5"/>
+        <text x="57.5" y="40" font-family="sans-serif" font-size="28" text-anchor="middle">👩🍳</text>
+        <text x="57.5" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9d174d" text-anchor="middle">Ibu</text>
+        <text x="57.5" y="84" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Mengurus rumah</text>
+        <text x="57.5" y="98" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Menyiapkan masakan</text>
+        <text x="57.5" y="110" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">&amp; mendidik anak</text>
+      </g>
+
+      <!-- Anak (Kakak & Adik) -->
+      <g transform="translate(280, 42)">
+        <rect width="115" height="120" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="57.5" y="40" font-family="sans-serif" font-size="28" text-anchor="middle">👦👧</text>
+        <text x="57.5" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">Anak</text>
+        <text x="57.5" y="84" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Belajar giat</text>
+        <text x="57.5" y="98" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Merapikan kamar</text>
+        <text x="57.5" y="110" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">&amp; patuh orang tua</text>
+      </g>
+
+      <!-- Kakek / Nenek -->
+      <g transform="translate(410, 42)">
+        <rect width="110" height="120" rx="10" fill="#fefce8" stroke="#eab308" stroke-width="1.5"/>
+        <text x="55" y="40" font-family="sans-serif" font-size="28" text-anchor="middle">👵👴</text>
+        <text x="55" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">Kakek &amp; Nenek</text>
+        <text x="55" y="84" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Anggota sesepuh</text>
+        <text x="55" y="98" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Dihormati &amp;</text>
+        <text x="55" y="110" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">disayangi cucu</text>
       </g>
     </svg>
   `)}`,
 
-  // Pertumbuhan Gigi Susu ke Gigi Permanen
-  tumbuhGigi: `data:image/svg+xml;utf8,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 170" width="100%" height="100%">
-      <rect width="460" height="170" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="2"/>
-      <text x="230" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Pergantian Gigi pada Masa Anak-Anak</text>
+  // Peralatan Kebersihan dan Keamanan Rumah
+  kebersihanRumah: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="100%" height="100%">
+      <rect width="500" height="150" rx="14" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+      <text x="250" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0e7490" text-anchor="middle">Perawatan Ruangan &amp; Keselamatan Anggota Keluarga di Rumah</text>
       
-      <g transform="translate(40, 40)">
-        <rect width="170" height="105" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
-        <text x="85" y="35" font-family="sans-serif" font-size="28" text-anchor="middle">🦷</text>
-        <text x="85" y="65" font-family="sans-serif" font-size="12" font-weight="bold" fill="#b45309" text-anchor="middle">Gigi Susu</text>
-        <text x="85" y="82" font-family="sans-serif" font-size="9.5" fill="#78350f" text-anchor="middle">Jumlah: 20 buah</text>
-        <text x="85" y="96" font-family="sans-serif" font-size="8.5" fill="#a16207" text-anchor="middle">Mulai tanggal usia 6 tahun</text>
+      <g transform="translate(30, 40)">
+        <rect width="125" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+        <text x="62.5" y="38" font-family="sans-serif" font-size="24" text-anchor="middle">🧹🗑️</text>
+        <text x="62.5" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e293b" text-anchor="middle">Sapu &amp; Pel</text>
+        <text x="62.5" y="82" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Lantai bersih &amp; higienis</text>
       </g>
-      
-      <text x="230" y="98" font-family="sans-serif" font-size="22" fill="#d97706" text-anchor="middle">→</text>
-      
-      <g transform="translate(250, 40)">
-        <rect width="170" height="105" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
-        <text x="85" y="35" font-family="sans-serif" font-size="28" text-anchor="middle">✨🦷</text>
-        <text x="85" y="65" font-family="sans-serif" font-size="12" font-weight="bold" fill="#047857" text-anchor="middle">Gigi Permanen (Tetap)</text>
-        <text x="85" y="82" font-family="sans-serif" font-size="9.5" fill="#065f46" text-anchor="middle">Jumlah lengkap: 32 buah</text>
-        <text x="85" y="96" font-family="sans-serif" font-size="8.5" fill="#047857" text-anchor="middle">Tidak berganti lagi jika tanggal</text>
-      </g>
-    </svg>
-  `)}`,
 
-  // Waktu Istirahat Tidur Sehat Anak
-  tidurCukup: `data:image/svg+xml;utf8,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 160" width="100%" height="100%">
-      <rect width="460" height="160" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
-      <g transform="translate(30, 25)">
-        <circle cx="50" cy="55" r="40" fill="#1e293b"/>
-        <text x="50" y="64" font-family="sans-serif" font-size="32" text-anchor="middle">🌙</text>
-        <g transform="translate(110, 10)">
-          <text x="0" y="20" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Kebutuhan Tidur Anak Usia Sekolah (Kelas 3 SD)</text>
-          <text x="0" y="42" font-family="sans-serif" font-size="11" fill="#334155">• Durasi ideal: <tspan font-weight="bold" fill="#2563eb">9 s.d. 11 Jam setiap malam</tspan></text>
-          <text x="0" y="64" font-family="sans-serif" font-size="11" fill="#334155">• Hormon pertumbuhan aktif diproduksi saat tidur lelap</text>
-          <text x="0" y="86" font-family="sans-serif" font-size="11" fill="#334155">• Memulihkan energi otak untuk fokus belajar keesokan hari</text>
-        </g>
+      <g transform="translate(185, 40)">
+        <rect width="130" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+        <text x="65" y="38" font-family="sans-serif" font-size="24" text-anchor="middle">⚠️🔥</text>
+        <text x="65" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">Kompor &amp; Pisau</text>
+        <text x="65" y="82" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Hati-hati di area dapur</text>
+      </g>
+
+      <g transform="translate(345, 40)">
+        <rect width="125" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+        <text x="62.5" y="38" font-family="sans-serif" font-size="24" text-anchor="middle">🪟☀️</text>
+        <text x="62.5" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle">Ventilasi Udara</text>
+        <text x="62.5" y="82" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Cahaya &amp; udara segar</text>
       </g>
     </svg>
   `)}`
@@ -235,717 +189,749 @@ const SVG_ICONS = {
 export const INITIAL_QUESTIONS: Question[] = [
   // =========================================================================
   // BAGIAN 1: PILIHAN GANDA (20 SOAL: NOMOR 1 s.d. 20)
+  // Lingkup materi:
+  // 1. Siklus Hidup Manusia (bayi, balita, anak-anak, remaja, dewasa, lansia)
+  // 2. Ragam Ruangan di Rumah (ruang tamu, kamar tidur, dapur, ruang makan, kamar mandi, garasi)
+  // 3. Peran Anggota Keluarga di Lingkungan Rumah
   // =========================================================================
+
+  // --- SIKLUS HIDUP MANUSIA (Soal 1 s.d. 7) ---
   {
     id: 'pg-1',
     originalNumber: 1,
     type: 'pilihan_ganda',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi tahapan siklus hidup manusia dari awal hingga akhir dengan tepat.',
-    indikator: 'Disajikan gambar urutan daur hidup manusia, siswa dapat menentukan tahapan awal siklus hidup setelah dilahirkan.',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi tahapan siklus hidup manusia secara berurutan mulai dari lahir hingga lanjut usia.',
+    indikator: 'Disajikan bagan siklus hidup manusia, siswa dapat mengidentifikasi tahapan awal kehidupan manusia setelah lahir.',
     cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Perhatikan gambar bagan siklus hidup manusia di bawah ini!\nTahapan pertama yang dilalui oleh seorang manusia sesaat setelah dilahirkan ke dunia adalah tahapan ...',
-    imageUrl: SVG_ICONS.siklusHidup,
-    imageCaption: 'Bagan Urutan Siklus Hidup Manusia',
-    options: ['Anak-anak', 'Balita', 'Bayi', 'Remaja'],
-    correctAnswer: 2,
     scoreWeight: 1,
-    explanation: 'Setelah dilahirkan oleh ibu, tahapan pertama kehidupan manusia adalah masa bayi (usia 0 hingga 1 tahun).'
+    question: 'Perhatikan bagan siklus hidup manusia berikut ini!\nTahapan pertama kehidupan manusia yang dimulai sesaat setelah dilahirkan oleh ibu hingga berusia 1 tahun disebut masa ...',
+    imageUrl: SVG_ICONS.siklusHidup,
+    imageCaption: 'Bagan 6 Tahapan Siklus Hidup Manusia',
+    options: ['Balita', 'Bayi', 'Anak-anak', 'Remaja'],
+    correctAnswer: 1,
+    explanation: 'Tahap pertama setelah manusia lahir ke dunia adalah masa bayi (usia 0 hingga 1 tahun).'
   },
   {
     id: 'pg-2',
     originalNumber: 2,
     type: 'pilihan_ganda',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri pertumbuhan fisik pada manusia.',
-    indikator: 'Siswa dapat menentukan peristiwa sehari-hari yang menjadi bukti terjadinya proses pertumbuhan (pertambahan ukuran).',
-    cognitiveLevel: 'L2',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi karakteristik tahapan balita pada siklus hidup manusia.',
+    indikator: 'Siswa dapat menentukan rentang usia manusia yang tergolong ke dalam masa balita (bawah lima tahun).',
+    cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Saat masih duduk di kelas 1 SD, seragam merah-putih milik Made terasa pas. Namun saat Made duduk di kelas 3 SD, seragam tersebut sudah terasa sempit dan pendek. Peristiwa ini membuktikan bahwa Made mengalami proses ...',
-    options: ['Perkembangbiakan', 'Pertumbuhan', 'Pernapasan', 'Pengurangan berat'],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Pertumbuhan adalah proses pertambahan ukuran fisik tubuh seperti bertambah tinggi dan bertambah berat badan, sehingga baju lama menjadi sempit.'
+    question: 'Adik Wayan sudah mulai lancar berjalan dan belajar menyebutkan kata-kata sederhana. Adik Wayan berusia 3 tahun, yang berarti ia berada pada tahapan ...',
+    options: ['Bayi baru lahir', 'Balita (Bawah Lima Tahun)', 'Remaja', 'Dewasa'],
+    correctAnswer: 1,
+    explanation: 'Masa balita (bawah lima tahun) berlangsung antara usia 1 hingga 5 tahun, di mana anak mulai belajar berjalan dan berbicara.'
   },
   {
     id: 'pg-3',
     originalNumber: 3,
     type: 'pilihan_ganda',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik membaca dan menganalisis data grafik pertumbuhan tinggi badan manusia.',
-    indikator: 'Disajikan grafik pertambahan tinggi badan dari lahir hingga usia 8 tahun, siswa dapat menghitung pertambahan tinggi badan yang terjadi.',
-    cognitiveLevel: 'L2',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri fisik dan kemandirian pada masa anak-anak.',
+    indikator: 'Siswa dapat mengidentifikasi peristiwa tanggalnya gigi susu yang terjadi pada masa anak-anak usia sekolah dasar.',
+    cognitiveLevel: 'L1',
     difficulty: 'Sedang',
-    question: 'Perhatikan grafik pertambahan tinggi badan Andi di bawah ini!\nBerdasarkan grafik tersebut, pertambahan tinggi badan Andi sejak dilahirkan (50 cm) hingga berusia 8 tahun (128 cm) adalah sebesar ...',
-    imageUrl: SVG_ICONS.grafikPertumbuhan,
-    imageCaption: 'Grafik Pertumbuhan Tinggi Badan Andi',
-    options: ['68 cm', '78 cm', '88 cm', '128 cm'],
-    correctAnswer: 1, // 128 - 50 = 78 cm
     scoreWeight: 1,
-    explanation: 'Pertambahan tinggi badan = Tinggi saat usia 8 tahun - Tinggi saat lahir = 128 cm - 50 cm = 78 cm.'
+    question: 'Pada tahapan masa anak-anak (usia sekitar 6 sampai 11 tahun) seperti siswa kelas 3 SD, peristiwa fisik alami yang umumnya dialami adalah ...',
+    options: [
+      'Gigi susu mulai tanggal dan digantikan oleh gigi permanen (gigi tetap)',
+      'Pertumbuhan tinggi badan telah berhenti total',
+      'Rambut seluruhnya memutih (beruban)',
+      'Hanya bisa minum air susu ibu tanpa makanan lain'
+    ],
+    correctAnswer: 0,
+    explanation: 'Pada masa anak-anak usia 6-11 tahun, gigi susu mulai tanggal secara bertahap dan digantikan oleh gigi tetap/permanen.'
   },
   {
     id: 'pg-4',
     originalNumber: 4,
     type: 'pilihan_ganda',
-    category: 'Ciri Perkembangan Kemampuan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik membedakan konsep pertumbuhan dan perkembangan pada manusia.',
-    indikator: 'Siswa dapat memilih contoh yang menunjukkan terjadinya proses perkembangan (pematangan fungsi organ atau kemampuan).',
-    cognitiveLevel: 'L2',
-    difficulty: 'Sedang',
-    question: 'Manakah dari pernyataan berikut yang merupakan contoh dari proses "perkembangan" pada manusia?',
-    options: [
-      'Berat badan adik bertambah dari 7 kg menjadi 10 kg',
-      'Tinggi badan kakak bertambah 5 sentimeter dalam setahun',
-      'Adik yang semula hanya bisa berguling kini sudah lancar berbicara',
-      'Panjang telapak kaki Dayu bertambah sehingga ukuran sepatunya naik'
-    ],
-    correctAnswer: 2,
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi masa remaja dan pubertas dalam daur hidup manusia.',
+    indikator: 'Siswa dapat menjelaskan tahapan peralihan dari masa anak-anak menuju masa dewasa.',
+    cognitiveLevel: 'L1',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    explanation: 'Pertumbuhan berkaitan dengan ukuran fisik yang dapat diukur dengan angka (tinggi, berat). Perkembangan berkaitan dengan bertambahnya fungsi dan kemampuan tubuh, seperti lancar berbicara dan berpikir.'
+    question: 'Masa peralihan dari masa anak-anak menuju masa dewasa yang ditandai dengan perubahan fisik pubertas disebut masa ...',
+    options: ['Bayi', 'Balita', 'Remaja', 'Lanjut Usia (Lansia)'],
+    correctAnswer: 2,
+    explanation: 'Masa remaja (usia 12 - 18 tahun) merupakan masa transisi atau peralihan dari anak-anak menuju dewasa dengan ciri perubahan pubertas.'
   },
   {
     id: 'pg-5',
     originalNumber: 5,
     type: 'pilihan_ganda',
-    category: 'Ciri Perkembangan Kemampuan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengurutkan tahapan perkembangan motorik gerak pada masa bayi.',
-    indikator: 'Disajikan ilustrasi tahapan gerak bayi, siswa dapat menentukan urutan perkembangan gerak yang benar.',
-    cognitiveLevel: 'L1',
-    difficulty: 'Mudah',
-    question: 'Perhatikan bagan perkembangan kemampuan motorik bayi berikut ini!\nUrutan tahapan perkembangan gerak alami yang dilalui oleh seorang bayi adalah ...',
-    imageUrl: SVG_ICONS.motorikBayi,
-    imageCaption: 'Tahapan Perkembangan Gerak Kasar Bayi',
-    options: [
-      'Berjalan → Merangkak → Duduk → Tengkurap',
-      'Tengkurap → Duduk → Merangkak → Berjalan',
-      'Duduk → Tengkurap → Berjalan → Merangkak',
-      'Merangkak → Berjalan → Duduk → Tengkurap'
-    ],
-    correctAnswer: 1,
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi karakteristik masa dewasa pada manusia.',
+    indikator: 'Siswa dapat menentukan ciri utama masa dewasa dalam hal pertumbuhan dan peran tanggung jawab.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
     scoreWeight: 1,
-    explanation: 'Urutan perkembangan gerak kasar pada bayi secara bertahap adalah tengkurap (3-4 bulan), duduk (6-7 bulan), merangkak (8-9 bulan), lalu mulai berdiri dan berjalan (11-14 bulan).'
+    question: 'Ayah dan ibu di rumah bekerja mencari nafkah dan mengasuh anak-anaknya dengan penuh kasih sayang. Pada siklus hidup manusia, ayah dan ibu berada pada tahap ...',
+    options: ['Masa balita', 'Masa anak-anak', 'Masa dewasa', 'Masa bayi'],
+    correctAnswer: 2,
+    explanation: 'Masa dewasa (sekitar usia 19-59 tahun) adalah tahap kematangan berpikir, organ tubuh telah matang sempurna, dan memiliki tanggung jawab bekerja serta berkeluarga.'
   },
   {
     id: 'pg-6',
     originalNumber: 6,
     type: 'pilihan_ganda',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi rentang usia dan karakteristik masa balita.',
-    indikator: 'Siswa dapat menentukan rentang usia manusia yang tergolong ke dalam kelompok balita (bawah lima tahun).',
-    cognitiveLevel: 'L1',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri masa lanjut usia (lansia).',
+    indikator: 'Disajikan deskripsi perubahan fisik kakek/nenek, siswa dapat mengaitkannya dengan tahap lanjut usia.',
+    cognitiveLevel: 'L2',
     difficulty: 'Mudah',
-    question: 'Istilah "balita" merupakan singkatan dari bawah lima tahun. Rentang usia seorang manusia yang berada pada masa balita adalah ...',
-    options: ['0 sampai 6 bulan', '1 sampai 5 tahun', '6 sampai 10 tahun', '12 sampai 17 tahun'],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Masa balita (bawah lima tahun) berlangsung pada rentang usia 1 hingga 5 tahun setelah melewati masa bayi.'
+    question: 'Kakek memiliki rambut yang telah memutih (beruban), kulit yang mulai keriput, serta memerlukan kacamata saat membaca koran. Hal ini menandakan bahwa Kakek telah memasuki tahapan ...',
+    options: ['Remaja', 'Balita', 'Anak-anak', 'Lanjut Usia (Lansia)'],
+    correctAnswer: 3,
+    explanation: 'Ciri-ciri fisik seperti rambut beruban, kulit keriput, dan penurunan daya fungsi tubuh adalah ciri alami manusia pada masa lanjut usia (lansia, umumnya 60 tahun ke atas).'
   },
   {
     id: 'pg-7',
     originalNumber: 7,
     type: 'pilihan_ganda',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menjelaskan perubahan susunan gigi pada masa anak-anak.',
-    indikator: 'Disajikan informasi pertumbuhan gigi, siswa dapat menentukan ciri gigi susu yang mulai tanggal pada masa anak-anak.',
-    cognitiveLevel: 'L1',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengurutkan tahapan siklus hidup manusia dengan tepat.',
+    indikator: 'Siswa dapat menentukan urutan daur hidup manusia dari awal hingga akhir dengan benar.',
+    cognitiveLevel: 'L2',
     difficulty: 'Sedang',
-    question: 'Perhatikan gambar perbandingan gigi susu dan gigi permanen berikut ini!\nKetika anak berusia sekitar 6 hingga 7 tahun, gigi susu mulai tanggal satu per satu dan digantikan oleh ...',
-    imageUrl: SVG_ICONS.tumbuhGigi,
-    imageCaption: 'Pertumbuhan dan Pergantian Gigi pada Anak',
-    options: ['Gigi taring palsu', 'Gigi permanen (gigi tetap)', 'Gigi geraham sementara', 'Gigi susu baru'],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Pada usia anak-anak (sekitar 6-12 tahun), gigi susu yang berjumlah 20 buah akan tanggal secara bertahap dan digantikan oleh gigi permanen (gigi tetap) yang berjumlah 32 buah.'
+    question: 'Urutan tahapan siklus hidup manusia yang benar dari awal kelahiran sampai akhir kehidupan adalah ...',
+    imageUrl: SVG_ICONS.siklusHidup,
+    imageCaption: 'Urutan Siklus Hidup Manusia',
+    options: [
+      'Bayi → Anak-anak → Balita → Dewasa → Remaja → Lansia',
+      'Bayi → Balita → Anak-anak → Remaja → Dewasa → Lanjut Usia (Lansia)',
+      'Balita → Bayi → Remaja → Anak-anak → Dewasa → Lansia',
+      'Anak-anak → Bayi → Balita → Remaja → Lansia → Dewasa'
+    ],
+    correctAnswer: 1,
+    explanation: 'Urutan siklus hidup manusia yang benar: Bayi (0-1 th) → Balita (1-5 th) → Anak-anak (6-11 th) → Remaja (12-18 th) → Dewasa (19-59 th) → Lanjut Usia (>=60 th).'
   },
+
+  // --- RAGAM RUANGAN DI RUMAH (Soal 8 s.d. 14) ---
   {
     id: 'pg-8',
     originalNumber: 8,
     type: 'pilihan_ganda',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi zat makanan yang berfungsi utama sebagai zat pembangun tubuh.',
-    indikator: 'Siswa dapat menentukan jenis zat gizi yang sangat diperlukan untuk pembentukan sel-sel tubuh baru pada masa pertumbuhan.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi fungsi ruang tamu sebagai tempat menerima tamu di rumah.',
+    indikator: 'Disajikan situasi bertamu, siswa dapat menentukan ruangan yang tepat di rumah untuk menyambut tamu.',
     cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Zat gizi yang sangat dibutuhkan oleh anak-anak pada masa pertumbuhan karena berfungsi sebagai zat pembangun sel-sel tubuh dan jaringan otot adalah ...',
-    options: ['Karbohidrat', 'Protein', 'Lemak jenuh', 'Garam dapur'],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Protein (seperti pada ikan, telur, tempe, susu, dan daging) berperan sebagai zat pembangun yang penting untuk pertumbuhan sel dan jaringan tubuh anak.'
+    question: 'Paman dan bibi datang berkunjung ke rumah Made. Ruangan di dalam rumah yang paling tepat digunakan untuk menyambut dan mempersilakan tamu duduk dengan sopan adalah ...',
+    options: ['Kamar mandi', 'Kamar tidur', 'Ruang tamu', 'Garasi mobil'],
+    correctAnswer: 2,
+    explanation: 'Ruang tamu terletak di bagian depan rumah dan difungsikan secara khusus untuk menerima serta menjamu sanak saudara atau tamu yang berkunjung.'
   },
   {
     id: 'pg-9',
     originalNumber: 9,
     type: 'pilihan_ganda',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menganalisis menu gizi seimbang berdasarkan konsep Isi Piringku.',
-    indikator: 'Disajikan gambar Isi Piringku, siswa dapat menentukan kombinasi makanan yang memenuhi syarat gizi seimbang.',
-    cognitiveLevel: 'L2',
-    difficulty: 'Sedang',
-    question: 'Perhatikan gambar panduan "Isi Piringku" berikut ini!\nIbu menyiapkan menu sarapan untuk Komang: sepiring nasi, sepotong ikan tongkol panggang, sayur bening bayam, dan sepotong buah pepaya segar. Menu makanan tersebut tergolong ...',
-    imageUrl: SVG_ICONS.giziSeimbang,
-    imageCaption: 'Pedoman Porsi Gizi Seimbang Isi Piringku',
-    options: [
-      'Kurang sehat karena tidak ada mie instan',
-      'Makanan bergizi seimbang lengkap dengan karbohidrat, protein, vitamin, dan serat',
-      'Berlebihan karena banyak mengandung gula',
-      'Hanya mengandung lemak tanpa vitamin'
-    ],
-    correctAnswer: 1,
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menjelaskan fungsi kamar tidur bagi anggota keluarga.',
+    indikator: 'Siswa dapat mengidentifikasi fungsi utama kamar tidur serta cara menjaga kerapiannya.',
+    cognitiveLevel: 'L1',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    explanation: 'Menu tersebut lengkap: nasi (karbohidrat/pokok), ikan tongkol (protein hewani/lauk), sayur bayam (vitamin & mineral), dan pepaya (vitamin & serat).'
+    question: 'Setelah seharian belajar di sekolah dan bermain bersama teman, Ketut merasa lelah dan mengantuk. Ruangan di rumah yang berfungsi sebagai tempat beristirahat dan tidur nyenyak adalah ...',
+    options: ['Kamar tidur', 'Dapur', 'Garasi', 'Ruang makan'],
+    correctAnswer: 0,
+    explanation: 'Kamar tidur adalah ruangan pribadi di rumah yang berfungsi untuk tempat tidur, beristirahat memulihkan tenaga, dan belajar pribadi.'
   },
   {
     id: 'pg-10',
     originalNumber: 10,
     type: 'pilihan_ganda',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik memahami pengaruh istirahat dan tidur terhadap hormon pertumbuhan.',
-    indikator: 'Disajikan infografis durasi tidur anak, siswa dapat menyimpulkan manfaat tidur cukup bagi pertumbuhan tubuh anak kelas 3 SD.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis fungsi dapur dan peralatan yang terdapat di dalamnya.',
+    indikator: 'Disajikan denah rumah, siswa dapat menentukan fungsi ruangan dapur bagi pemenuhan kebutuhan pangan keluarga.',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
-    question: 'Perhatikan gambar pentingnya istirahat tidur bagi anak-anak berikut ini!\nAnak usia sekolah dasar dianjurkan tidur sekitar 9-11 jam setiap malam karena saat tidur nyenyak tubuh akan ...',
-    imageUrl: SVG_ICONS.tidurCukup,
-    imageCaption: 'Pentingnya Istirahat Cukup bagi Tumbuh Kembang',
-    options: [
-      'Menghambat pertumbuhan tinggi badan',
-      'Memproduksi hormon pertumbuhan dan memulihkan energi tubuh',
-      'Mengurangi jumlah sel darah merah di tubuh',
-      'Membuat organ jantung berhenti bekerja sementara'
-    ],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Ketika tidur nyenyak di malam hari, tubuh anak memproduksi hormon pertumbuhan (growth hormone) secara optimal yang membantu pertambahan tinggi badan dan perbaikan sel tubuh.'
+    question: 'Perhatikan denah tata ruangan rumah di bawah ini!\nRuangan yang dilengkapi dengan peralatan kompor, wajan, panci, dan kulkas untuk mengolah bahan makanan menjadi masakan siap santap adalah ...',
+    imageUrl: SVG_ICONS.denahRumah,
+    imageCaption: 'Denah Tata Ruangan Rumah Sehat',
+    options: ['Ruang tamu', 'Dapur', 'Kamar tidur', 'Garasi'],
+    correctAnswer: 1,
+    explanation: 'Dapur adalah ruangan yang digunakan untuk mengolah bahan pangan, memasak, dan menyiapkan aneka masakan sehat bagi seluruh keluarga.'
   },
   {
     id: 'pg-11',
     originalNumber: 11,
     type: 'pilihan_ganda',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi masa pubertas pada siklus hidup manusia.',
-    indikator: 'Siswa dapat menentukan tahapan siklus hidup di mana manusia mulai mengalami masa pubertas (peralihan dari anak-anak).',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi fungsi ruang makan dan adab makan bersama.',
+    indikator: 'Siswa dapat menentukan fungsi ruang makan sebagai sarana mempererat kebersamaan keluarga saat santap makan.',
     cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Masa peralihan dari tahap anak-anak menuju tahap dewasa yang ditandai dengan perubahan fisik pubertas disebut masa ...',
-    options: ['Bayi', 'Balita', 'Remaja', 'Lansia'],
-    correctAnswer: 2,
     scoreWeight: 1,
-    explanation: 'Masa remaja (usia sekitar 12 - 18 tahun) adalah masa transisi dari anak-anak menuju dewasa yang ditandai oleh perubahan pubertas.'
+    question: 'Ruangan di rumah yang biasanya terdapat meja makan dan kursi makan untuk berkumpul menikmati sarapan atau makan malam bersama keluarga disebut ...',
+    options: ['Ruang makan', 'Garasi', 'Kamar mandi', 'Ruang tamu'],
+    correctAnswer: 0,
+    explanation: 'Ruang makan berfungsi sebagai tempat santap makan bersama seluruh anggota keluarga sehingga tercipta suasana kebersamaan yang hangat.'
   },
   {
     id: 'pg-12',
     originalNumber: 12,
     type: 'pilihan_ganda',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri fisik pada masa lanjut usia (lansia).',
-    indikator: 'Siswa dapat menganalisis ciri-ciri fisik yang dialami oleh manusia pada masa lanjut usia.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menjelaskan fungsi kamar mandi dan pentingnya menjaga keselamatan di dalamnya.',
+    indikator: 'Siswa dapat menentukan tindakan yang tepat untuk mencegah bahaya terpeleset di kamar mandi.',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
-    question: 'Kakek Wayan memiliki rambut yang mulai memutih (beruban), kulit yang mulai keriput, serta kekuatan otot dan penglihatan yang mulai berkurang. Ciri-ciri fisik tersebut menunjukkan bahwa Kakek Wayan berada pada tahap ...',
-    options: ['Dewasa awal', 'Masa remaja', 'Masa anak-anak', 'Lanjut usia (Lansia)'],
-    correctAnswer: 3,
     scoreWeight: 1,
-    explanation: 'Pada tahap lanjut usia (lansia, umumnya 60 tahun ke atas), terjadi proses penuaan alami seperti rambut beruban, kulit keriput, dan penurunan daya fungsi tubuh.'
+    question: 'Kamar mandi berfungsi untuk membersihkan diri, mandi, dan buang air. Agar anggota keluarga seperti kakek dan adik tidak terpeleset saat berada di kamar mandi, hal yang harus selalu dijaga adalah ...',
+    options: [
+      'Menyiram lantai dengan air sabun dan membiarkannya licin',
+      'Menyikat lantai kamar mandi secara rutin agar tidak berlumut dan licin',
+      'Mematikan semua lampu hingga gelap gulita',
+      'Menyimpan benda-benda tajam di lantai kamar mandi'
+    ],
+    correctAnswer: 1,
+    explanation: 'Lantai kamar mandi harus rutin disikat bersih agar bebas dari lumut dan sisa sabun yang licin sehingga aman dan mencegah risiko terpeleset.'
   },
   {
     id: 'pg-13',
     originalNumber: 13,
     type: 'pilihan_ganda',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi faktor keturunan (genetik) dalam pertumbuhan fisik.',
-    indikator: 'Siswa dapat menentukan faktor bawaan dari orang tua yang mempengaruhi ciri fisik anak.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi fungsi garasi di rumah.',
+    indikator: 'Siswa dapat menentukan kendaraan atau benda yang tepat diletakkan di garasi rumah.',
     cognitiveLevel: 'L1',
-    difficulty: 'Sedang',
-    question: 'Ketut memiliki rambut ikal dan kulit sawo matang mirip seperti ayahnya, sedangkan bentuk hidungnya mirip dengan ibunya. Ciri-ciri fisik yang diwariskan dari orang tua kepada anaknya ini dipengaruhi oleh faktor ...',
-    options: ['Keturunan (Genetik)', 'Olahraga teratur', 'Pemberian vitamin', 'Pola tidur'],
-    correctAnswer: 0,
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    explanation: 'Ciri-ciri fisik seperti warna kulit, bentuk rambut, dan golongan darah diwariskan langsung oleh kedua orang tua melalui faktor keturunan (genetik).'
+    question: 'Ayah baru saja pulang dari kantor mengendarai sepeda motor. Ruangan di rumah yang difungsikan khusus sebagai tempat memarkir dan menyimpan sepeda motor, mobil, atau sepeda adalah ...',
+    options: ['Ruang tamu', 'Kamar tidur', 'Garasi', 'Ruang makan'],
+    correctAnswer: 2,
+    explanation: 'Garasi adalah ruangan atau bagian rumah yang digunakan khusus untuk memarkir dan menyimpan kendaraan bermotor maupun sepeda agar aman dari cuaca dan pencurian.'
   },
   {
     id: 'pg-14',
     originalNumber: 14,
     type: 'pilihan_ganda',
-    category: 'Perawatan Diri & Kesehatan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menerapkan kebiasaan hidup bersih dan sehat untuk menjaga organ tubuh.',
-    indikator: 'Siswa dapat memilih tindakan tepat dalam menjaga kebersihan diri untuk mendukung tumbuh kembang yang optimal.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis aturan keselamatan saat berada di dapur rumah.',
+    indikator: 'Disajikan gambar peralatan dapur dan kebersihan, siswa dapat menentukan sikap hati-hati terhadap benda berbahaya di dapur.',
     cognitiveLevel: 'L2',
-    difficulty: 'Mudah',
-    question: 'Agar tubuh terhindar dari kuman penyakit dan tetap tumbuh sehat setelah berolahraga di lapangan sekolah, tindakan yang paling tepat dilakukan adalah ...',
-    options: [
-      'Langsung tidur siang dengan pakaian olahraga',
-      'Mencuci tangan dan kaki dengan sabun serta mandi membersihkan badan',
-      'Membeli es sirup yang manis di pinggir jalan',
-      'Mengusap keringat di baju lalu bermain gawai'
-    ],
-    correctAnswer: 1,
+    difficulty: 'Sedang',
     scoreWeight: 1,
-    explanation: 'Mandi dan mencuci tangan/kaki menggunakan sabun setelah beraktivitas membantu membersihkan keringat, debu, dan kuman yang menempel di tubuh sehingga kesehatan tetap terjaga.'
+    question: 'Perhatikan gambar perlengkapan dan keamanan rumah berikut ini!\nKetika berada di area dapur, anak kelas 3 SD tidak boleh bermain-main dengan kompor gas dan pisau dapur karena ...',
+    imageUrl: SVG_ICONS.kebersihanRumah,
+    imageCaption: 'Keamanan dan Kebersihan Ruangan Rumah',
+    options: [
+      'Pisau dan api kompor dapat menyebabkan luka sayat atau kebakaran berbahaya',
+      'Dapur adalah tempat khusus untuk tidur siang',
+      'Kompor gas dapat digunakan sebagai mainan balon',
+      'Ibu akan senang jika kompor dinyalakan sembarangan'
+    ],
+    correctAnswer: 0,
+    explanation: 'Kompor dan pisau di dapur merupakan benda yang berisiko bahaya (panas/tajam), sehingga anak harus berhati-hati dan selalu di bawah pengawasan orang tua.'
   },
+
+  // --- PERAN ANGGOTA KELUARGA DI RUMAH (Soal 15 s.d. 20) ---
   {
     id: 'pg-15',
     originalNumber: 15,
     type: 'pilihan_ganda',
-    category: 'Ciri Perkembangan Kemampuan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menganalisis perkembangan kemandirian pada siswa kelas 3 SD.',
-    indikator: 'Siswa dapat menentukan contoh perilaku mandiri yang menunjukkan perkembangan kemampuan diri anak usia sekolah dasar.',
-    cognitiveLevel: 'L2',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi peran dan tanggung jawab ayah di lingkungan rumah.',
+    indikator: 'Siswa dapat menentukan kedudukan dan kewajiban utama seorang ayah sebagai kepala keluarga.',
+    cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Di antara kegiatan berikut, manakah yang menunjukkan perkembangan sikap mandiri pada seorang siswa kelas 3 SD?',
+    scoreWeight: 1,
+    question: 'Dalam susunan anggota keluarga di rumah, ayah berperan sebagai kepala keluarga yang memiliki kewajiban utama untuk ...',
     options: [
-      'Menangis ketika harus ditinggal orang tua di depan gerbang sekolah',
-      'Menyiapkan buku pelajaran dan memakai seragam sekolah sendiri tanpa bantuan ibu',
-      'Meminta disuapi makanan setiap kali makan siang',
-      'Meninggalkan sepatu dan tas sembarangan di lantai ruang tamu'
+      'Hanya bermain ponsel sepanjang hari tanpa bekerja',
+      'Mencari nafkah, melindungi, dan memimpin keluarga dengan bijaksana',
+      'Menyerahkan semua pekerjaan rumah kepada anak kecil',
+      'Tidur terus-menerus di kamar tamu'
     ],
     correctAnswer: 1,
-    scoreWeight: 1,
-    explanation: 'Kemampuan menyiapkan perlengkapan sekolah dan berpakaian secara mandiri merupakan tanda perkembangan kemandirian dan tanggung jawab anak usia sekolah dasar.'
+    explanation: 'Sebagai kepala keluarga, ayah bertanggung jawab mencari nafkah untuk mencukupi kebutuhan keluarga, menjadi teladan, serta melindungi seluruh anggota keluarga.'
   },
   {
     id: 'pg-16',
     originalNumber: 16,
     type: 'pilihan_ganda',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik memahami fungsi air putih bagi metabolisme tubuh manusia.',
-    indikator: 'Siswa dapat menentukan anjuran minum air putih harian untuk mencegah dehidrasi pada anak.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi peran dan tugas ibu di lingkungan rumah.',
+    indikator: 'Siswa dapat menjelaskan peran ibu dalam merawat keluarga dan mengurus kebutuhan rumah tangga.',
     cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Tubuh manusia sebagian besar terdiri dari cairan. Untuk menjaga kesehatan dan mendukung kelancaran metabolisme tubuh, kita dianjurkan minum air putih setiap hari minimal sebanyak ...',
-    options: ['1 sampai 2 gelas', '4 sampai 5 sendok makan', '8 gelas (sekitar 1,5 sampai 2 liter)', '15 liter sehari'],
-    correctAnswer: 2,
     scoreWeight: 1,
-    explanation: 'Anjuran minum air putih harian untuk anak-anak dan orang dewasa rata-rata adalah 8 gelas atau setara dengan 1,5 hingga 2 liter setiap hari.'
+    question: 'Ibu memiliki peran yang sangat mulia di rumah, antara lain mengurus rumah tangga, memasak makanan sehat, serta ...',
+    options: [
+      'Membiarkan anak tidak belajar dan membolos sekolah',
+      'Mendidik, merawat, dan menyayangi anak-anak dengan tulus',
+      'Melarang anak makan makanan bergizi',
+      'Menyuruh anak tinggal di luar rumah'
+    ],
+    correctAnswer: 1,
+    explanation: 'Peran ibu di rumah antara lain mendidik dan merawat anak, mengelola urusan rumah tangga, serta menciptakan suasana rumah yang penuh kasih sayang.'
   },
   {
     id: 'pg-17',
     originalNumber: 17,
     type: 'pilihan_ganda',
-    category: 'Perawatan Diri & Kesehatan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menganalisis dampak makanan cepat saji (junk food) terhadap kesehatan anak.',
-    indikator: 'Disajikan studi kasus kebiasaan jajan anak, siswa dapat memprediksi dampak negatif jajan tidak sehat bagi proses tumbuh kembang.',
-    cognitiveLevel: 'L3',
-    difficulty: 'Sukar',
-    question: 'Putu sangat gemar mengonsumsi makanan ringan kemasan yang gurih dan minuman bersoda setiap hari, serta jarang makan sayur dan buah. Jika kebiasaan ini terus berlanjut, dampak yang paling mungkin dialami Putu adalah ...',
-    options: [
-      'Tulang dan giginya menjadi sangat kuat',
-      'Daya tahan tubuh meningkat pesat',
-      'Tubuh rentan mengalami obesitas (kegemukan tidak sehat) dan kekurangan zat gizi mikro',
-      'Tinggi badannya bertambah lebih cepat dari teman sebayanya'
-    ],
-    correctAnswer: 2,
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis kewajiban dan tanggung jawab anak di rumah.',
+    indikator: 'Siswa dapat memilih contoh perilaku anak yang menjalankan kewajibannya di rumah setelah bangun tidur.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    explanation: 'Makanan ringan kemasan dan minuman bersoda tinggi kadar gula, garam, dan lemak, namun miskin vitamin dan serat, sehingga dapat memicu obesitas dan mengganggu kekebalan tubuh anak.'
+    question: 'Setiap pagi setelah bangun tidur di kamar tidurnya, tindakan yang menunjukkan pelaksanaan kewajiban dan kemandirian anak adalah ...',
+    options: [
+      'Membiarkan selimut dan bantal berantakan di lantai',
+      'Merapikan tempat tidur, melipat selimut, dan meletakkan bantal pada tempatnya',
+      'Menangis meminta ibu membereskan semua kasurnya',
+      'Langsung bermain sepeda keluar tanpa mandi'
+    ],
+    correctAnswer: 1,
+    explanation: 'Merapikan tempat tidur sendiri setelah bangun merupakan salah satu wujud kewajiban anak dalam menjaga kerapian rumah dan melatih kemandirian.'
   },
   {
     id: 'pg-18',
     originalNumber: 18,
     type: 'pilihan_ganda',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menjelaskan manfaat olahraga bagi pertumbuhan tulang dan otot.',
-    indikator: 'Siswa dapat menjelaskan mekanisme olahraga dalam memperkuat tulang dan kelincahan tubuh.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengevaluasi manfaat gotong royong dan kerjasama anggota keluarga di rumah.',
+    indikator: 'Disajikan ilustrasi kerjasama keluarga, siswa dapat menyimpulkan manfaat membersihkan rumah secara bersama-sama.',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
-    question: 'Olahraga teratur seperti berenang, lari pagi, atau senam sangat bermanfaat bagi anak-anak karena ...',
-    options: [
-      'Menjadikan anak malas belajar di kelas',
-      'Merangsang pertumbuhan tulang, menguatkan otot, dan melatih kelenturan tubuh',
-      'Mengurangi kebutuhan makan setiap hari',
-      'Menyebabkan gigi susu tanggal lebih cepat'
-    ],
-    correctAnswer: 1,
     scoreWeight: 1,
-    explanation: 'Olahraga fisik merangsang kepadatan tulang, memperkuat otot jantung dan rangka, serta menjaga kebugaran jasmani anak.'
+    question: 'Perhatikan gambar pembagian tugas keluarga berikut ini!\nPada hari Minggu, Ayah membersihkan halaman dan garasi, Ibu memasak di dapur, sedangkan Komang dan Kakak membantu menyapu lantai ruang tamu. Manfaat dari kegiatan kerjasama ini adalah ...',
+    imageUrl: SVG_ICONS.peranKeluarga,
+    imageCaption: 'Kerjasama Anggota Keluarga di Lingkungan Rumah',
+    options: [
+      'Pekerjaan rumah menjadi terasa lebih berat dan melelahkan',
+      'Anggota keluarga menjadi sering bertengkar satu sama lain',
+      'Pekerjaan rumah tangga cepat selesai dan hubungan keluarga menjadi semakin rukun',
+      'Rumah menjadi semakin berdebu dan berantakan'
+    ],
+    correctAnswer: 2,
+    explanation: 'Gotong royong dan saling membantu antaranggota keluarga membuat pekerjaan rumah yang berat menjadi ringan, cepat selesai, serta menumbuhkan kerukunan.'
   },
   {
     id: 'pg-19',
     originalNumber: 19,
     type: 'pilihan_ganda',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi fase dewasa dalam siklus hidup manusia.',
-    indikator: 'Siswa dapat mengidentifikasi ciri-ciri kehidupan seseorang pada tahap dewasa.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi sikap santun kepada kakek dan nenek yang tinggal di rumah.',
+    indikator: 'Siswa dapat memilih sikap hormat dan kasih sayang yang patut ditunjukkan kepada kakek/nenek.',
     cognitiveLevel: 'L2',
-    difficulty: 'Sedang',
-    question: 'Pada tahap kehidupan manusia, masa dewasa ditandai oleh ciri-ciri utama seperti ...',
-    options: [
-      'Pertumbuhan fisik tinggi badan telah berhenti dan siap bekerja serta membina keluarga',
-      'Masih membutuhkan bantuan penuh dari orang tua untuk makan',
-      'Seluruh gigi susunya baru mulai tanggal',
-      'Hanya mampu berkomunikasi dengan menangis'
-    ],
-    correctAnswer: 0,
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    explanation: 'Pada masa dewasa (usia 19-59 tahun), pertambahan tinggi badan umumnya telah berhenti, emosi lebih stabil, organ reproduksi matang, dan memiliki tanggung jawab mandiri (bekerja/berkeluarga).'
+    question: 'Jika kakek atau nenek tinggal bersama kita di rumah, sikap yang paling terpuji yang harus ditunjukkan oleh seorang anak adalah ...',
+    options: [
+      'Berbicara dengan nada membentak dan kasar kepada kakek',
+      'Menghormati, berbicara santun, dan siap membantu saat kakek atau nenek membutuhkan bantuan',
+      'Mengabaikan kakek dan nenek yang sedang duduk sendirian',
+      'Mengambil kacamata kakek untuk mainan sembunyi-sembunyian'
+    ],
+    correctAnswer: 1,
+    explanation: 'Kakek dan nenek adalah orang tua dari ayah atau ibu yang harus dihormati, disayangi, dan diperlakukan dengan sopan santun serta penuh kasih sayang.'
   },
   {
     id: 'pg-20',
     originalNumber: 20,
     type: 'pilihan_ganda',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengevaluasi alat ukur pertumbuhan pada manusia.',
-    indikator: 'Disajikan beberapa alat ukur, siswa dapat memilih alat yang tepat untuk mengukur pertumbuhan berat dan tinggi badan.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membedakan antara hak dan kewajiban anak di lingkungan keluarga.',
+    indikator: 'Siswa dapat menentukan hak yang berhak diterima anak dari orang tuanya di rumah.',
     cognitiveLevel: 'L1',
     difficulty: 'Mudah',
-    question: 'Untuk mengetahui apakah berat badan dan tinggi badan siswa kelas 3 SD mengalami pertumbuhan yang baik dari bulan ke bulan, petugas kesehatan menggunakan alat ukur berupa ...',
+    scoreWeight: 1,
+    question: 'Di samping memiliki kewajiban untuk belajar dan membantu orang tua, seorang anak juga berhak mendapatkan ...',
     options: [
-      'Termometer dan stopwatch',
-      'Timbangan berat badan dan meteran / stadiometer pengukur tinggi badan',
-      'Penggaris segitiga dan jangka sorong',
-      'Gelas ukur dan neraca pegas lab'
+      'Hukuman setiap hari tanpa alasan yang jelas',
+      'Kasih sayang, bimbingan, makanan bergizi, dan tempat tinggal yang aman dari orang tua',
+      'Tuntutan untuk bekerja mencari uang nafkah keluarga',
+      'Kewajiban mengerjakan semua pekerjaan rumah tangga sendirian'
     ],
     correctAnswer: 1,
-    scoreWeight: 1,
-    explanation: 'Timbangan digunakan untuk mengukur massa/berat badan (satuan kg), sedangkan meteran/stadiometer digunakan untuk mengukur tinggi badan (satuan cm).'
+    explanation: 'Hak anak di rumah antara lain mendapatkan kasih sayang, perlindungan, tempat tinggal yang layak, makanan sehat, serta kesempatan untuk belajar dan bermain.'
   },
 
   // =========================================================================
   // BAGIAN 2: PILIHAN GANDA KOMPLEKS KATEGORI (10 SOAL: NOMOR 21 s.d. 30)
-  // Setiap soal memiliki tepat 3 deskripsi/pernyataan yang harus direspons Benar / Salah.
+  // Setiap butir memuat tepat 3 deskripsi/pernyataan yang harus direspons Benar atau Salah!
   // =========================================================================
+
+  // Soal 21: Siklus Hidup Manusia (Bayi dan Balita)
   {
     id: 'pgk-21',
     originalNumber: 21,
     type: 'kategori',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik membedakan ciri-ciri proses pertumbuhan fisik manusia.',
-    indikator: 'Disajikan 3 pernyataan tentang pertumbuhan fisik, siswa dapat menentukan kebenaran tiap pernyataan (Benar/Salah).',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membedakan ciri-ciri tahap bayi dan balita dalam siklus hidup manusia.',
+    indikator: 'Disajikan 3 pernyataan tentang tahap bayi dan balita, siswa dapat menentukan kebenaran tiap pernyataan (Benar/Salah).',
     cognitiveLevel: 'L2',
     difficulty: 'Mudah',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan mengenai "Ciri Pertumbuhan Fisik" pada manusia berikut ini termasuk BENAR atau SALAH!',
-    explanation: 'Pertumbuhan bersifat kuantitatif (dapat diukur dengan angka seperti kg dan cm). Berat badan bayi yang bertambah dan ukuran sepatu yang membesar merupakan bukti pertumbuhan.',
+    imageUrl: SVG_ICONS.siklusHidup,
+    imageCaption: 'Tahap Bayi dan Balita pada Siklus Hidup',
+    question: 'Perhatikan bagan siklus hidup manusia! Tentukan apakah setiap pernyataan mengenai tahapan "Bayi dan Balita" berikut ini BENAR atau SALAH!',
+    explanation: 'Bayi (0-1 tahun) sangat bergantung pada orang tua dan mengonsumsi ASI. Balita (1-5 tahun) mulai belajar berjalan dan berbicara.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-21-1',
-        text: 'Pertumbuhan fisik manusia ditandai dengan pertambahan ukuran tubuh yang dapat diukur dengan angka seperti tinggi dan berat badan.',
+        text: 'Bayi yang baru lahir sangat bergantung pada orang tua untuk makan dan belum mampu berjalan sendiri.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-21-2',
-        text: 'Pertambahan ukuran sepatu anak dari nomor 28 menjadi nomor 32 merupakan contoh terjadinya pertumbuhan telapak kaki.',
+        text: 'Pada masa balita (usia 1 sampai 5 tahun), anak mulai belajar berjalan, berlari kecil, dan berbicara kata-kata sederhana.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-21-3',
-        text: 'Tinggi badan manusia akan terus bertambah sepanjang hidupnya bahkan hingga usia kakek-nenek (lansia).',
+        text: 'Bayi yang baru berusia 2 bulan sudah dapat langsung disuruh menyiapkan pakaian dan seragam sekolahnya sendiri.',
         correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 22: Siklus Hidup Manusia (Anak-anak dan Remaja)
   {
     id: 'pgk-22',
     originalNumber: 22,
     type: 'kategori',
-    category: 'Ciri Perkembangan Kemampuan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri perkembangan kemampuan dan kematangan fungsi tubuh.',
-    indikator: 'Disajikan 3 pernyataan tentang ciri perkembangan manusia, siswa dapat menganalisis kebenarannya (Benar/Salah).',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi perubahan pada masa anak-anak menuju masa remaja.',
+    indikator: 'Disajikan 3 pernyataan tentang ciri anak-anak dan remaja, siswa dapat menentukan kebenarannya.',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan mengenai "Perkembangan Kemampuan Manusia" berikut ini termasuk BENAR atau SALAH!',
-    explanation: 'Perkembangan menitikberatkan pada pematangan kemampuan, fungsi organ, keterampilan gerak, bahasa, serta pola pikir.',
+    question: 'Tentukan apakah setiap pernyataan mengenai tahapan "Anak-Anak dan Remaja" berikut ini BENAR atau SALAH!',
+    explanation: 'Masa anak-anak adalah usia sekolah dasar. Masa remaja mengalami pubertas dengan pertumbuhan fisik yang cepat.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-22-1',
-        text: 'Bayi yang awalnya hanya menangis lalu mulai belajar mengucap kata "mama" dan "papa" adalah contoh perkembangan kemampuan berbicara.',
+        text: 'Siswa kelas 3 SD yang berusia sekitar 8 sampai 9 tahun berada pada tahapan masa anak-anak.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-22-2',
-        text: 'Perkembangan pada manusia hanya terjadi pada bentuk ukuran fisik saja dan tidak melibatkan kemampuan berpikir atau emosi.',
-        correctAnswer: 'Salah'
+        text: 'Masa remaja merupakan masa peralihan dari anak-anak menuju dewasa yang ditandai dengan perubahan fisik masa pubertas.',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-22-3',
-        text: 'Siswa kelas 3 SD yang sudah mampu membaca buku cerita sendiri dan memahami isinya menunjukkan terjadinya perkembangan kecerdasan.',
-        correctAnswer: 'Benar'
+        text: 'Masa remaja dilalui manusia setelah mereka melewati usia lanjut (lansia).',
+        correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 23: Siklus Hidup Manusia (Dewasa dan Lanjut Usia)
   {
     id: 'pgk-23',
     originalNumber: 23,
     type: 'kategori',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi tahapan dan karakteristik siklus hidup manusia.',
-    indikator: 'Disajikan 3 pernyataan tentang tahapan siklus hidup manusia, siswa dapat menentukan kebenaran tiap pernyataan.',
-    cognitiveLevel: 'L1',
-    difficulty: 'Mudah',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri-ciri tahap dewasa dan lanjut usia.',
+    indikator: 'Disajikan 3 pernyataan tentang tahap dewasa dan lansia, siswa dapat menganalisis kebenarannya.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
     scoreWeight: 1,
-    imageUrl: SVG_ICONS.siklusHidup,
-    imageCaption: 'Tahapan Siklus Hidup Manusia Lengkap',
-    question: 'Perhatikan bagan siklus hidup manusia! Tentukan apakah setiap pernyataan mengenai tahapan kehidupan manusia berikut BENAR atau SALAH!',
-    explanation: 'Urutan siklus hidup manusia adalah: Bayi → Balita → Anak-anak → Remaja → Dewasa → Lansia.',
+    question: 'Tentukan apakah setiap pernyataan mengenai tahapan "Dewasa dan Lanjut Usia (Lansia)" berikut ini BENAR atau SALAH!',
+    explanation: 'Masa dewasa pertumbuhan tinggi badan berhenti dan siap bekerja. Pada lansia terjadi penurunan fisik alami (uban, keriput).',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-23-1',
-        text: 'Masa anak-anak dilalui setelah seorang manusia melewati tahapan bayi dan balita.',
+        text: 'Pada masa dewasa, manusia umumnya telah memiliki kematangan fisik dan tanggung jawab untuk bekerja mencari nafkah.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-23-2',
-        text: 'Masa remaja dialami manusia setelah mereka melewati tahap usia lanjut (lansia).',
-        correctAnswer: 'Salah'
+        text: 'Rambut yang memutih (beruban) dan kulit yang mulai keriput adalah ciri fisik yang umum terjadi pada masa lanjut usia (lansia).',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-23-3',
-        text: 'Semua manusia yang lahir sehat akan melewati siklus pertumbuhan dari bayi hingga masa dewasa.',
-        correctAnswer: 'Benar'
+        text: 'Tinggi badan manusia pada masa lanjut usia akan terus bertambah semakin tinggi melebihi pohon kelapa.',
+        correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 24: Ragam Ruangan di Rumah (Ruang Tamu, Kamar Tidur, Ruang Makan)
   {
     id: 'pgk-24',
     originalNumber: 24,
     type: 'kategori',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menganalisis fungsi gizi pada makanan terhadap pertumbuhan tubuh.',
-    indikator: 'Disajikan 3 pernyataan tentang fungsi zat gizi makanan, siswa dapat mengevaluasi kebenarannya.',
-    cognitiveLevel: 'L2',
-    difficulty: 'Sedang',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membedakan fungsi ruang tamu, kamar tidur, dan ruang makan di rumah.',
+    indikator: 'Disajikan 3 pernyataan tentang fungsi ruangan di rumah, siswa dapat memvalidasi kebenarannya.',
+    cognitiveLevel: 'L1',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    imageUrl: SVG_ICONS.giziSeimbang,
-    imageCaption: 'Kelompok Zat Gizi Isi Piringku',
-    question: 'Tentukan apakah setiap pernyataan mengenai zat gizi bagi tumbuh kembang tubuh berikut ini termasuk BENAR atau SALAH!',
-    explanation: 'Karbohidrat penghasil energi, protein zat pembangun, vitamin/mineral zat pengatur & pelindung daya tahan tubuh.',
+    imageUrl: SVG_ICONS.denahRumah,
+    imageCaption: 'Denah Ruangan Rumah',
+    question: 'Perhatikan denah ruangan rumah! Tentukan apakah setiap pernyataan mengenai fungsi ruangan berikut ini BENAR atau SALAH!',
+    explanation: 'Ruang tamu untuk menerima tamu, kamar tidur untuk istirahat, dan ruang makan untuk santap makan bersama.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-24-1',
-        text: 'Nasi, jagung, dan singkong merupakan makanan pokok yang kaya akan karbohidrat sebagai sumber tenaga utama tubuh.',
+        text: 'Ruang tamu berfungsi sebagai tempat untuk menyambut dan mempersilakan tamu yang berkunjung ke rumah.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-24-2',
-        text: 'Kalsium pada susu dan ikan bermanfaat untuk memperkuat kepadatan tulang dan gigi pada anak-anak.',
+        text: 'Kamar tidur adalah tempat pribadi yang digunakan untuk beristirahat, tidur nyenyak, dan belajar mandiri.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-24-3',
-        text: 'Makan permen dan cokelat dalam jumlah banyak adalah pengganti terbaik untuk sayur dan buah.',
+        text: 'Ruang makan adalah tempat khusus di rumah yang digunakan untuk mencuci pakaian dan memarkir mobil.',
         correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 25: Ragam Ruangan di Rumah (Dapur, Kamar Mandi, Garasi)
   {
     id: 'pgk-25',
     originalNumber: 25,
     type: 'kategori',
-    category: 'Ciri Pertumbuhan Fisik',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik memahami proses pergantian gigi susu ke gigi permanen pada anak.',
-    indikator: 'Disajikan 3 pernyataan tentang fase pergantian gigi susu, siswa dapat memvalidasi kebenarannya.',
-    cognitiveLevel: 'L2',
-    difficulty: 'Sedang',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membedakan fungsi dapur, kamar mandi, dan garasi kendaraan.',
+    indikator: 'Disajikan 3 pernyataan tentang fungsi dapur, kamar mandi, dan garasi, siswa dapat mengevaluasi kebenarannya.',
+    cognitiveLevel: 'L1',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    imageUrl: SVG_ICONS.tumbuhGigi,
-    imageCaption: 'Karakteristik Gigi Susu dan Gigi Tetap',
-    question: 'Perhatikan gambar pertumbuhan gigi! Tentukan apakah setiap pernyataan mengenai pertumbuhan gigi berikut ini BENAR atau SALAH!',
-    explanation: 'Gigi susu berjumlah 20 dan dapat tanggal. Gigi permanen berjumlah 32, jika rusak/tanggal tidak akan tumbuh lagi secara alami.',
+    question: 'Tentukan apakah setiap pernyataan mengenai fungsi ruangan "Dapur, Kamar Mandi, dan Garasi" berikut ini BENAR atau SALAH!',
+    explanation: 'Dapur untuk memasak, kamar mandi untuk membersihkan diri, garasi untuk memarkir kendaraan.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-25-1',
-        text: 'Gigi pertama yang tumbuh pada masa bayi disebut dengan gigi susu.',
+        text: 'Dapur difungsikan sebagai ruangan untuk mengolah bahan makanan dan memasak sajian keluarga.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-25-2',
-        text: 'Jika gigi permanen (gigi tetap) pada orang dewasa tanggal atau dicabut, gigi tersebut akan tumbuh kembali dengan sendirinya.',
-        correctAnswer: 'Salah'
+        text: 'Garasi digunakan sebagai tempat untuk memarkir serta menyimpan sepeda, sepeda motor, atau mobil agar aman.',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-25-3',
-        text: 'Menyikat gigi secara teratur dua kali sehari (pagi setelah sarapan dan malam sebelum tidur) menjaga gigi tetap sehat dan tidak berlubang.',
-        correctAnswer: 'Benar'
+        text: 'Kamar mandi adalah tempat yang tepat untuk menyalakan api unggun dan memasak sayur sop.',
+        correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 26: Ragam Ruangan di Rumah (Kebersihan & Keselamatan Ruangan)
   {
     id: 'pgk-26',
     originalNumber: 26,
     type: 'kategori',
-    category: 'Faktor Nutrisi & Pola Hidup',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik menganalisis faktor-faktor yang mempengaruhi percepatan tumbuh kembang manusia.',
-    indikator: 'Disajikan 3 pernyataan tentang faktor yang mempengaruhi pertumbuhan manusia, siswa dapat menganalisis kebenarannya.',
+    category: 'Ragam Ruangan di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis aturan menjaga kebersihan dan keselamatan di berbagai ruangan rumah.',
+    indikator: 'Disajikan 3 aturan keselamatan ruangan rumah, siswa dapat menilai ketepatannya (Benar/Salah).',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan tentang faktor-faktor yang mempengaruhi proses tumbuh kembang manusia berikut BENAR atau SALAH!',
-    explanation: 'Faktor penentu meliputi makanan bergizi, genetik/keturunan orang tua, aktivitas fisik/olahraga, waktu tidur cukup, dan kesehatan lingkungan.',
+    imageUrl: SVG_ICONS.kebersihanRumah,
+    imageCaption: 'Pedoman Kebersihan dan Keamanan Ruangan',
+    question: 'Tentukan apakah setiap pernyataan mengenai "Kebersihan dan Keselamatan Ruangan di Rumah" berikut ini BENAR atau SALAH!',
+    explanation: 'Kebersihan ruangan menjaga kesehatan keluarga. Lantai licin di kamar mandi dan api kompor di dapur harus diwaspadai.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-26-1',
-        text: 'Dua orang anak yang berusia sama persis (misalnya sama-sama berusia 8 tahun) pasti selalu memiliki tinggi dan berat badan yang tepat sama.',
-        correctAnswer: 'Salah'
+        text: 'Lantai kamar mandi harus rutin disikat agar tidak berlumut licin yang dapat membahayakan anggota keluarga.',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-26-2',
-        text: 'Kebiasaan tidur larut malam (begadang) sambil bermain game di ponsel dapat mengganggu kerja hormon pertumbuhan pada anak.',
+        text: 'Membuka jendela kamar tidur di pagi hari membantu pergantian udara segar dan masuknya sinar matahari yang sehat.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-26-3',
-        text: 'Pemberian imunisasi dan vitamin pada masa balita membantu melindungi tubuh anak dari serangan penyakit berbahaya.',
-        correctAnswer: 'Benar'
+        text: 'Meninggalkan piring dan gelas kotor menumpuk berhari-hari di dapur adalah cara terbaik menjaga kebersihan rumah.',
+        correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 27: Peran Anggota Keluarga di Rumah (Tanggung Jawab Ayah dan Ibu)
   {
     id: 'pgk-27',
     originalNumber: 27,
     type: 'kategori',
-    category: 'Tahapan Siklus Hidup Manusia',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengidentifikasi perubahan fisik yang terjadi pada masa pubertas dan lanjut usia.',
-    indikator: 'Disajikan 3 pernyataan tentang perubahan fisik pada masa remaja dan lansia, siswa dapat menentukan kebenarannya.',
-    cognitiveLevel: 'L3',
-    difficulty: 'Sukar',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi peran ayah dan ibu dalam membina keharmonisan keluarga.',
+    indikator: 'Disajikan 3 pernyataan tentang peran orang tua di rumah, siswa dapat menganalisis kebenarannya.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Mudah',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan mengenai perubahan fisik pada tahapan kehidupan manusia berikut ini BENAR atau SALAH!',
-    explanation: 'Pada remaja laki-laki suara membesar dan tumbuh jakun. Pada lansia fungsi organ menurun dan kulit mengeriput.',
+    imageUrl: SVG_ICONS.peranKeluarga,
+    imageCaption: 'Peran Orang Tua dan Anak di Rumah',
+    question: 'Perhatikan gambar peran keluarga! Tentukan apakah setiap pernyataan mengenai "Peran Ayah dan Ibu di Rumah" berikut BENAR atau SALAH!',
+    explanation: 'Ayah memimpin dan mencari nafkah. Ibu mengurus rumah tangga dan merawat anak. Keduanya bekerjasama membimbing keluarga.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-27-1',
-        text: 'Salah satu ciri pubertas pada anak laki-laki adalah suara yang terdengar lebih berat dan membesar.',
+        text: 'Ayah berperan sebagai kepala keluarga yang bertanggung jawab memimpin, menafkahi, dan melindungi anggota keluarga.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-27-2',
-        text: 'Pada masa lanjut usia (lansia), kemampuan daya ingat, pendengaran, dan kelenturan otot tubuh cenderung mengalami penurunan.',
+        text: 'Ibu berperan merawat anak-anak, mengelola kebutuhan rumah tangga, dan mendidik anak dengan penuh kasih sayang.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-27-3',
-        text: 'Masa bayi adalah masa di mana manusia telah memiliki kemampuan fisik paling kuat untuk bekerja berat.',
+        text: 'Ayah dan ibu tidak perlu saling membantu karena tugas di rumah hanya boleh dikerjakan oleh satu orang saja.',
         correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 28: Peran Anggota Keluarga di Rumah (Hak & Kewajiban Anak)
   {
     id: 'pgk-28',
     originalNumber: 28,
     type: 'kategori',
-    category: 'Perawatan Diri & Kesehatan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengaitkan kebiasaan higienis dengan pencegahan penyakit infeksi saluran cerna.',
-    indikator: 'Disajikan 3 pernyataan mengenai kebiasaan mencuci tangan, siswa dapat menentukan kebenarannya.',
-    cognitiveLevel: 'L1',
-    difficulty: 'Mudah',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengevaluasi hak dan kewajiban anak di lingkungan rumah.',
+    indikator: 'Disajikan 3 perilaku anak di rumah, siswa dapat menentukan kebenaran peran anak tersebut.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan mengenai cara menjaga kebersihan diri berikut ini termasuk BENAR atau SALAH!',
-    explanation: 'Mencuci tangan dengan air mengalir dan sabun membunuh kuman penyebab diare dan cacingan yang mengganggu penyerapan nutrisi anak.',
+    question: 'Tentukan apakah setiap pernyataan mengenai "Hak dan Kewajiban Anak di Lingkungan Rumah" berikut ini BENAR atau SALAH!',
+    explanation: 'Kewajiban anak: belajar, menghormati orang tua, membantu tugas rumah sesuai kemampuan. Hak anak: kasih sayang, sandang pangan, pendidikan.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-28-1',
-        text: 'Mencuci tangan dengan sabun dan air mengalir sebelum makan dapat mencegah kuman penyebab sakit perut masuk ke dalam tubuh.',
+        text: 'Belajar dengan tekun dan mematuhi nasehat baik dari orang tua merupakan kewajiban utama seorang anak di rumah.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-28-2',
-        text: 'Kuku jari tangan yang panjang dan kotor sebaiknya dibiarkan saja karena tidak mempengaruhi kesehatan.',
-        correctAnswer: 'Salah'
+        text: 'Membantu menyapu lantai atau mencuci piring sendiri setelah makan adalah wujud bakti anak dalam meringankan tugas orang tua.',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-28-3',
-        text: 'Memakai pakaian yang bersih dan kering menghindarkan kulit dari rasa gatal serta jamur kulit.',
-        correctAnswer: 'Benar'
+        text: 'Seorang anak memiliki hak untuk membentak orang tua dan menolak mengerjakan pekerjaan sekolah.',
+        correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 29: Peran Anggota Keluarga di Rumah (Kerjasama & Gotong Royong)
   {
     id: 'pgk-29',
     originalNumber: 29,
     type: 'kategori',
-    category: 'Ciri Perkembangan Kemampuan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik membandingkan karakteristik kemampuan bayi baru lahir dengan anak usia sekolah.',
-    indikator: 'Disajikan 3 perbandingan kemampuan bayi vs anak usia 8-9 tahun, siswa dapat memvalidasi kebenarannya.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menerapkan nilai gotong royong dan kebersamaan di lingkungan keluarga.',
+    indikator: 'Disajikan 3 kegiatan kerjasama keluarga, siswa dapat memvalidasi kebenarannya.',
     cognitiveLevel: 'L2',
     difficulty: 'Sedang',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap perbandingan kemampuan antara bayi dengan siswa kelas 3 SD berikut ini BENAR atau SALAH!',
-    explanation: 'Bayi belum mandiri dan makanannya berupa ASI. Siswa kelas 3 SD sudah mampu makan mandiri, berlari, dan berpikir logis.',
+    question: 'Tentukan apakah setiap pernyataan mengenai "Kerjasama dan Kerukunan Anggota Keluarga" berikut ini BENAR atau SALAH!',
+    explanation: 'Kerjasama menjaga rumah tetap bersih dan nyaman serta mempererat ikatan kasih sayang keluarga.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-29-1',
-        text: 'Bayi baru lahir hanya dapat mengonsumsi air susu ibu (ASI) karena organ pencernaannya belum mampu mengunyah nasi atau daging.',
+        text: 'Ketika rumah dibersihkan bersama-sama pada hari libur, suasana rumah menjadi bersih dan hubungan antarkeluarga semakin akrab.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-29-2',
-        text: 'Anak kelas 3 SD sudah dapat diajarkan untuk membedakan perbuatan yang baik dan perbuatan yang tidak terpuji.',
+        text: 'Kakak dan adik yang saling tolong-menolong serta tidak bertengkar saat belajar membuat orang tua merasa bahagia.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-29-3',
-        text: 'Bayi berusia 2 bulan sudah mampu menyeberang jalan raya sendiri tanpa bantuan orang dewasa.',
+        text: 'Menumpuk sampah di halaman depan dan enggan membantu orang tua adalah contoh perilaku terpuji anak di rumah.',
         correctAnswer: 'Salah'
       }
     ]
   },
+
+  // Soal 30: Peran Anggota Keluarga & Kakek Nenek
   {
     id: 'pgk-30',
     originalNumber: 30,
     type: 'kategori',
-    category: 'Perawatan Diri & Kesehatan',
-    elemen: 'Pemahaman IPAS (Sains dan Sosial)',
-    capaianPembelajaran: 'Peserta didik mengevaluasi pola hidup sehat untuk mengoptimalkan potensi tumbuh kembang.',
-    indikator: 'Disajikan 3 pernyataan penerapan pola hidup sehat di lingkungan keluarga dan sekolah, siswa dapat mengevaluasi kebenarannya.',
+    category: 'Peran Anggota Keluarga di Rumah',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengaitkan tahapan siklus hidup lansia dengan penghormatan cucu kepada kakek dan nenek di rumah.',
+    indikator: 'Disajikan 3 pernyataan tentang peran dan kasih sayang kepada kakek/nenek, siswa dapat mengevaluasi kebenarannya.',
     cognitiveLevel: 'L3',
     difficulty: 'Sedang',
     scoreWeight: 1,
-    question: 'Tentukan apakah setiap pernyataan mengenai pola hidup sehat untuk mendukung proses tumbuh kembang manusia berikut ini BENAR atau SALAH!',
-    explanation: 'Pola hidup sehat memadukan makanan bergizi seimbang, kebersihan diri, olahraga, tidur cukup, serta suasana keluarga yang penuh kasih sayang.',
+    imageUrl: SVG_ICONS.peranKeluarga,
+    imageCaption: 'Menyayangi Anggota Keluarga di Rumah',
+    question: 'Tentukan apakah setiap pernyataan mengenai "Sikap Terhadap Kakek dan Nenek di Rumah" berikut ini BENAR atau SALAH!',
+    explanation: 'Kakek dan nenek berada pada tahap lanjut usia yang fisik/daya ingatnya mulai menurun, sehingga perlu diperlakukan dengan penuh kesabaran, cinta, dan hormat.',
     categoryType: 'benar_salah',
     statements: [
       {
         id: 'st-30-1',
-        text: 'Bermain game di depan layar gawai sepanjang hari tanpa bergerak sama sekali adalah cara terbaik melatih kekuatan otot anak.',
-        correctAnswer: 'Salah'
+        text: 'Kakek dan nenek berada pada tahap lanjut usia yang perlu disayangi, diperhatikan kesehatannya, dan dihormati oleh cucu-cucunya.',
+        correctAnswer: 'Benar'
       },
       {
         id: 'st-30-2',
-        text: 'Lingkungan rumah yang bersih dan mendapat sirkulasi udara serta sinar matahari pagi yang cukup mendukung kesehatan pernapasan anak.',
+        text: 'Membantu menuntun kakek berjalan atau mengambilkan air minum adalah contoh tindakan terpuji yang mencerminkan bakti anak.',
         correctAnswer: 'Benar'
       },
       {
         id: 'st-30-3',
-        text: 'Perhatian dan kasih sayang dari orang tua serta guru di sekolah berperan penting bagi perkembangan rasa percaya diri anak.',
-        correctAnswer: 'Benar'
+        text: 'Kakek dan nenek yang sudah lanjut usia sebaiknya dipaksa bekerja mengangkat beban berat di kebun setiap hari.',
+        correctAnswer: 'Salah'
       }
     ]
   }

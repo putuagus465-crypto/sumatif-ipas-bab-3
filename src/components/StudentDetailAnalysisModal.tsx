@@ -88,7 +88,7 @@ export const StudentDetailAnalysisModal: React.FC<StudentDetailAnalysisModalProp
 
     if (result.score >= 90) {
       recs.push(
-        'Siswa telah menguasai seluruh materi Siklus Hidup dan Tumbuh Kembang Manusia dengan sangat istimewa (Kategori Mahir). Berikan materi pengayaan mandiri tentang perbandingan daur hidup manusia dengan hewan mamalia lain.'
+        'Siswa telah menguasai seluruh materi Siklus Hidup Manusia, Ragam Ruangan di Rumah, dan Peran Anggota Keluarga dengan sangat istimewa (Kategori Mahir). Berikan materi pengayaan mandiri tentang denah rumah ramah lingkungan serta peran keluarga dalam masyarakat.'
       );
       recs.push('Dapat diberdayakan sebagai tutor sebaya (peer tutor) untuk membantu teman sekelas yang belum tuntas.');
     } else if (result.score >= result.kktp) {
@@ -105,7 +105,7 @@ export const StudentDetailAnalysisModal: React.FC<StudentDetailAnalysisModalProp
         );
       }
       recs.push(
-        'Metode tindak lanjut: Gunakan media visual bagan siklus hidup berwarna dan demonstrasi alat ukur pertumbuhan (timbangan dan stadiometer) di kelas untuk memperkuat pemahaman konkret anak kelas 3.'
+        'Metode tindak lanjut: Gunakan media visual bagan 6 tahapan siklus hidup manusia, denah ragam ruangan rumah, serta kartu peran anggota keluarga di kelas untuk memperkuat pemahaman konkret anak kelas 3.'
       );
       recs.push('Berikan lembar kerja latihan terstruktur sebelum mengikuti tes remedial ulang.');
     }

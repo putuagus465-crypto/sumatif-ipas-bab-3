@@ -1,8 +1,8 @@
 import { ExamResultData, ExamSettings, Question } from '../types';
 import { INITIAL_QUESTIONS } from '../data/questions';
 
-const STORAGE_KEY_RESULTS = 'sdn3_loloan_ipas_results_v2';
-const STORAGE_KEY_SETTINGS = 'sdn3_loloan_ipas_settings_v2';
+const STORAGE_KEY_RESULTS = 'sdn3_loloan_ipas_results_v3';
+const STORAGE_KEY_SETTINGS = 'sdn3_loloan_ipas_settings_v3';
 
 export const DEFAULT_SETTINGS: ExamSettings = {
   schoolName: 'SD Negeri 3 Loloan Timur',
@@ -12,7 +12,7 @@ export const DEFAULT_SETTINGS: ExamSettings = {
   teacherNip: '199711062022211001',
   className: 'Kelas III',
   subject: 'IPAS',
-  topic: 'Siklus Hidup Manusia, Ciri-Ciri Tumbuh dan Kembang Manusia',
+  topic: 'Siklus Hidup Manusia, Ragam Ruangan di Rumah, dan Peran Anggota Keluarga di Rumah',
   kktp: 70,
   allowShowSolutions: false,
   sheetWebhookUrl: '',
@@ -38,7 +38,7 @@ export function getExamSettings(): ExamSettings {
         teacherNip: parsed.teacherNip || DEFAULT_SETTINGS.teacherNip,
         className: parsed.className || DEFAULT_SETTINGS.className,
         subject: parsed.subject || DEFAULT_SETTINGS.subject,
-        topic: parsed.topic || DEFAULT_SETTINGS.topic,
+        topic: DEFAULT_SETTINGS.topic, // use latest topic
         kktp: parsed.kktp ?? DEFAULT_SETTINGS.kktp,
       };
     }
