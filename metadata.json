@@ -1,0 +1,8 @@
+{
+  "name": "Tes Sumatif Matematika bab 3- SD Negeri 3 Loloan Timur",
+  "description": "Aplikasi Tes Sumatif Kemampuan Akademik Matematika Kelas V SD Negeri 3 Loloan Timur berbasis web responsif, acak soal, rekap spreadsheet, dan cetak PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
