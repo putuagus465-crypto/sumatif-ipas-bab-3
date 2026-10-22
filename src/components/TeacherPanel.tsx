@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Shield,
@@ -92,6 +92,13 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
   const [testingWebhook, setTestingWebhook] = useState(false);
   const [webhookTestMessage, setWebhookTestMessage] = useState('');
 
+  // Sync local settings whenever settings change or panel opens
+  useEffect(() => {
+    if (isOpen) {
+      setLocalSettings({ ...settings });
+    }
+  }, [isOpen, settings]);
+
   if (!isOpen) return null;
 
   // Handle Login
@@ -166,10 +173,10 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
     const weightedScore = fullCorrect + partial * 0.5;
     const percentage = totalSubmissions > 0 ? Math.round((weightedScore / totalSubmissions) * 100) : 0;
 
-    // Klasifikasi empiris kesukaran: Mudah (>70%), Sedang (25-70%), Sukar (<25%)
+    // Klasifikasi empiris kesukaran: Mudah (>70%), Sedang (30-70%), Sukar (<30%)
     let empirical = 'Sedang';
     if (percentage > 70) empirical = 'Mudah';
-    else if (percentage < 25) empirical = 'Sukar';
+    else if (percentage < 30) empirical = 'Sukar';
 
     return {
       q,
@@ -699,7 +706,7 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
                               );
                             })}
                             <td colSpan={4} className="p-2 text-left text-[10px] text-slate-600">
-                              M (&gt;70%), S (25-70%), K (&lt;25%)
+                              M (&gt;70%), S (30-70%), K (&lt;30%)
                             </td>
                           </tr>
                         </tfoot>
@@ -852,60 +859,93 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
                       </div>
                     </div>
 
-                    <div className="overflow-x-auto max-h-[480px]">
+                    <div className="overflow-x-auto max-h-[520px]">
                       <table className="w-full border-collapse text-xs text-left">
-                        <thead className="bg-slate-100 text-slate-700 font-bold sticky top-0 z-10 shadow-xs">
+                        <thead className="bg-slate-100 text-slate-700 font-bold sticky top-0 z-10 shadow-xs border-b border-slate-200">
                           <tr>
-                            <th className="p-2.5 w-12 text-center">No</th>
-                            <th className="p-2.5 w-24">Bentuk</th>
-                            <th className="p-2.5 w-40">Materi Pokok</th>
-                            <th className="p-2.5">Indikator Soal &amp; Soal</th>
-                            <th className="p-2.5 w-20 text-center">Level</th>
-                            <th className="p-2.5 w-24 text-center">Kesukaran</th>
+                            <th className="p-2.5 w-12 text-center border-r border-slate-200">No. Soal</th>
+                            <th className="p-2.5 w-48 border-r border-slate-200">Elemen / Capaian Pembelajaran (CP)</th>
+                            <th className="p-2.5 w-48 border-r border-slate-200">Tujuan Pembelajaran (TP)</th>
+                            <th className="p-2.5 min-w-[220px] border-r border-slate-200">Materi Pokok &amp; Indikator Soal</th>
+                            <th className="p-2.5 w-20 text-center border-r border-slate-200">Level Kognitif</th>
+                            <th className="p-2.5 w-24 text-center border-r border-slate-200">Bentuk Soal</th>
+                            <th className="p-2.5 w-44">Kunci Jawaban &amp; Bobot</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
-                          {questions.map((q) => (
-                            <tr key={q.id} className="hover:bg-slate-50 transition-colors">
-                              <td className="p-2.5 text-center font-bold text-slate-700">
-                                #{q.originalNumber}
-                              </td>
-                              <td className="p-2.5">
-                                <span className={`px-2 py-0.5 rounded-md font-semibold text-[11px] ${
-                                  q.type === 'pilihan_ganda'
-                                    ? 'bg-blue-100 text-blue-800'
-                                    : 'bg-amber-100 text-amber-800'
-                                }`}>
-                                  {q.type === 'pilihan_ganda' ? 'PG' : 'PGK Kategori'}
-                                </span>
-                              </td>
-                              <td className="p-2.5 font-medium text-slate-800">
-                                {q.category}
-                              </td>
-                              <td className="p-2.5 space-y-1">
-                                <p className="text-slate-500 text-[11px] font-medium">
-                                  <strong>Indikator:</strong> {q.indikator}
-                                </p>
-                                <p className="text-slate-900 font-semibold line-clamp-2">
-                                  {q.question}
-                                </p>
-                              </td>
-                              <td className="p-2.5 text-center font-bold text-slate-700">
-                                {q.cognitiveLevel}
-                              </td>
-                              <td className="p-2.5 text-center">
-                                <span className={`px-2 py-0.5 rounded text-[11px] font-semibold ${
-                                  q.difficulty === 'Mudah'
-                                    ? 'bg-emerald-100 text-emerald-800'
-                                    : q.difficulty === 'Sedang'
-                                    ? 'bg-blue-100 text-blue-800'
-                                    : 'bg-rose-100 text-rose-800'
-                                }`}>
-                                  {q.difficulty}
-                                </span>
-                              </td>
-                            </tr>
-                          ))}
+                          {questions.map((q) => {
+                            let keyText = '';
+                            if (q.type === 'pilihan_ganda' && q.options && q.correctAnswer !== undefined) {
+                              const letter = String.fromCharCode(65 + q.correctAnswer);
+                              keyText = `Opsi ${letter}: ${q.options[q.correctAnswer]}`;
+                            } else if (q.type === 'kategori' && q.statements) {
+                              keyText = q.statements
+                                .map((s, sIdx) => `${sIdx + 1}: ${s.correctAnswer === 'Benar' ? 'B' : 'S'}`)
+                                .join(' | ');
+                            }
+
+                            return (
+                              <tr key={q.id} className="hover:bg-blue-50/40 transition-colors">
+                                <td className="p-2.5 text-center font-bold text-slate-800 border-r border-slate-100 align-top">
+                                  #{q.originalNumber}
+                                </td>
+                                <td className="p-2.5 border-r border-slate-100 align-top">
+                                  <span className="font-bold text-slate-900 block mb-0.5">{q.elemen}</span>
+                                  <span className="text-[11px] text-slate-500 leading-relaxed block">{q.capaianPembelajaran}</span>
+                                </td>
+                                <td className="p-2.5 border-r border-slate-100 align-top text-slate-700 text-[11px] leading-relaxed">
+                                  {q.tujuanPembelajaran || 'Menguasai konsep esensial materi secara komprehensif.'}
+                                </td>
+                                <td className="p-2.5 border-r border-slate-100 align-top space-y-1">
+                                  <div className="font-bold text-blue-900">{q.category}</div>
+                                  <div className="text-[11px] text-slate-600 leading-snug">
+                                    <strong className="text-slate-800">Indikator:</strong> {q.indikator}
+                                  </div>
+                                  <div className="text-[11px] text-slate-800 bg-slate-50 p-2 rounded-lg border border-slate-200/80 mt-1">
+                                    <strong className="text-slate-700 block mb-0.5">Pertanyaan:</strong>
+                                    <span className="line-clamp-2">{q.question}</span>
+                                  </div>
+                                </td>
+                                <td className="p-2.5 text-center border-r border-slate-100 align-top">
+                                  <span className="font-black px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[11px] inline-block">
+                                    {q.cognitiveLevel}
+                                  </span>
+                                  <span className="block text-[10px] text-slate-500 font-medium mt-1">
+                                    {q.cognitiveLevel === 'L1' ? 'Pemahaman' : q.cognitiveLevel === 'L2' ? 'Aplikasi' : 'Penalaran'}
+                                  </span>
+                                  <span className={`mt-1.5 px-1.5 py-0.5 rounded text-[10px] font-semibold block ${
+                                    q.difficulty === 'Mudah'
+                                      ? 'bg-emerald-100 text-emerald-800'
+                                      : q.difficulty === 'Sedang'
+                                      ? 'bg-sky-100 text-sky-800'
+                                      : 'bg-rose-100 text-rose-800'
+                                  }`}>
+                                    {q.difficulty}
+                                  </span>
+                                </td>
+                                <td className="p-2.5 text-center border-r border-slate-100 align-top">
+                                  <span className={`px-2 py-0.5 rounded-md font-semibold text-[11px] inline-block ${
+                                    q.type === 'pilihan_ganda'
+                                      ? 'bg-blue-100 text-blue-800'
+                                      : 'bg-amber-100 text-amber-800'
+                                  }`}>
+                                    {q.type === 'pilihan_ganda' ? 'Pilihan Ganda' : 'PGK Kategori'}
+                                  </span>
+                                  <span className="block text-[10px] text-slate-500 mt-1">
+                                    {q.type === 'pilihan_ganda' ? '(Tunggal)' : '(3 Respon B/S)'}
+                                  </span>
+                                </td>
+                                <td className="p-2.5 align-top space-y-1">
+                                  <div className="text-[11px] font-bold text-emerald-800 bg-emerald-50/80 p-1.5 rounded-lg border border-emerald-200">
+                                    {keyText}
+                                  </div>
+                                  <div className="text-[10px] text-slate-500 font-semibold">
+                                    Bobot Skor: <span className="text-slate-800 font-bold">{q.scoreWeight} Poin</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            );
+                          })}
                         </tbody>
                       </table>
                     </div>
@@ -1153,11 +1193,15 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
               {activeTab === 'script' && (
                 <div className="space-y-6 max-w-3xl">
                   <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-2">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Mendukung Banyak Aplikasi / Mapel Berbeda dalam 1 Google Spreadsheet</span>
+                    </div>
                     <h3 className="font-bold text-base text-slate-900">
-                      Otomatisasi Sinkronisasi Google Sheets Webhook
+                      Otomatisasi Sinkronisasi Google Sheets Multi-Mapel
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
-                      Setiap kali siswa menyelesaikan tes, data nilai dan jawaban otomatis dikirimkan ke Spreadsheet online Anda.
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      Anda dapat menggunakan <strong>1 Google Spreadsheet yang sama</strong> untuk semua aplikasi tes (IPAS, Matematika, Bahasa Indonesia, dll). Script ini otomatis membuat dan memisahkan tab per mata pelajaran serta mencatat rekap seluruh nilai ke tab master.
                     </p>
                   </div>
 

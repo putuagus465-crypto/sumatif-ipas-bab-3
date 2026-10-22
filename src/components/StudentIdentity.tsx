@@ -7,6 +7,7 @@ interface StudentIdentityProps {
   settings: ExamSettings;
   onStartExam: (student: Student) => void;
   onDownloadQuestionPDF: () => void;
+  onDownloadKisiKisiPDF: () => void;
   onOpenTeacherPanel: () => void;
 }
 
@@ -14,6 +15,7 @@ export const StudentIdentity: React.FC<StudentIdentityProps> = ({
   settings,
   onStartExam,
   onDownloadQuestionPDF,
+  onDownloadKisiKisiPDF,
   onOpenTeacherPanel,
 }) => {
   const [fullName, setFullName] = useState('');
@@ -229,26 +231,37 @@ export const StudentIdentity: React.FC<StudentIdentityProps> = ({
             </div>
 
             {/* Teacher and PDF download card */}
-            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 text-center sm:text-left">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 text-center sm:text-left space-y-3">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center shrink-0">
                     <FileText className="w-5 h-5 text-blue-700" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-900">Naskah Soal Ujian</h4>
-                    <p className="text-xs text-slate-500">Cetak atau simpan soal dalam bentuk PDF</p>
+                    <h4 className="text-sm font-bold text-slate-900">Naskah &amp; Dokumen Ujian</h4>
+                    <p className="text-xs text-slate-500">Cetak atau simpan naskah soal dan matriks kisi-kisi kedinasan</p>
                   </div>
                 </div>
+              </div>
 
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                 <button
                   type="button"
                   id="btn-download-pdf-questions"
                   onClick={onDownloadQuestionPDF}
-                  className="w-full sm:w-auto px-3.5 py-2 bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 rounded-xl text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                  className="w-full px-3 py-2 bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 rounded-xl text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
                 >
                   <FileText className="w-4 h-4 text-blue-600" />
                   <span>Unduh Soal (PDF)</span>
+                </button>
+                <button
+                  type="button"
+                  id="btn-download-pdf-kisi-kisi-home"
+                  onClick={onDownloadKisiKisiPDF}
+                  className="w-full px-3 py-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 rounded-xl text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                >
+                  <BookOpen className="w-4 h-4 text-blue-700" />
+                  <span>Unduh Kisi-Kisi Soal (PDF)</span>
                 </button>
               </div>
             </div>

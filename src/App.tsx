@@ -133,6 +133,7 @@ export default function App() {
             settings={settings}
             onStartExam={handleStartExam}
             onDownloadQuestionPDF={() => setPrintSheetModal({ open: true, withAnswers: false })}
+            onDownloadKisiKisiPDF={() => setPrintKisiKisiOpen(true)}
             onOpenTeacherPanel={() => setIsTeacherPanelOpen(true)}
           />
         )}

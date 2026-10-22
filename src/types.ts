@@ -19,6 +19,7 @@ export interface Question {
   category: string; // Sub-topik materi IPAS
   elemen: string; // Elemen CP (e.g. 'Pemahaman IPAS')
   capaianPembelajaran: string;
+  tujuanPembelajaran: string; // TP (Tujuan Pembelajaran Kurikulum Merdeka)
   indikator: string; // Indikator ketercapaian soal
   cognitiveLevel: CognitiveLevel; // L1, L2, L3
   difficulty: DifficultyLevel; // Mudah, Sedang, Sukar

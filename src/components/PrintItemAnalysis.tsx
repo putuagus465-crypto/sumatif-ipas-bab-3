@@ -44,10 +44,10 @@ export const PrintItemAnalysis: React.FC<PrintItemAnalysisProps> = ({
     const weightedScore = fullCorrect + partial * 0.5;
     const percentage = totalStudents > 0 ? Math.round((weightedScore / totalStudents) * 100) : 0;
 
-    // Klasifikasi empiris kesukaran: Mudah (>70%), Sedang (25-70%), Sukar (<25%)
+    // Klasifikasi empiris kesukaran: Mudah (>70%), Sedang (30-70%), Sukar (<30%)
     let empirical = 'Sedang';
     if (percentage > 70) empirical = 'Mudah';
-    else if (percentage < 25) empirical = 'Sukar';
+    else if (percentage < 30) empirical = 'Sukar';
 
     return {
       q,

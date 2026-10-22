@@ -1,8 +1,11 @@
 import { ExamResultData, ExamSettings, Question } from '../types';
 import { INITIAL_QUESTIONS } from '../data/questions';
 
-const STORAGE_KEY_RESULTS = 'sdn3_loloan_ipas_results_v3';
-const STORAGE_KEY_SETTINGS = 'sdn3_loloan_ipas_settings_v3';
+const STORAGE_KEY_RESULTS = 'sdn3_loloan_ipas_results_v4';
+const STORAGE_KEY_SETTINGS = 'sdn3_loloan_ipas_settings_v4';
+
+export const DEFAULT_WEBHOOK_URL =
+  'https://script.google.com/macros/s/AKfycbwA__bqHqwFqO7P2OrqAx9SXUdefoZMDzsO74CYq5qayUXiEmmjV7Yr0H59MdTsXIur8A/exec';
 
 export const DEFAULT_SETTINGS: ExamSettings = {
   schoolName: 'SD Negeri 3 Loloan Timur',
@@ -15,7 +18,7 @@ export const DEFAULT_SETTINGS: ExamSettings = {
   topic: 'Siklus Hidup Manusia, Ragam Ruangan di Rumah, dan Peran Anggota Keluarga di Rumah',
   kktp: 70,
   allowShowSolutions: false,
-  sheetWebhookUrl: '',
+  sheetWebhookUrl: DEFAULT_WEBHOOK_URL,
   teacherPassword: 'GURUADMIN',
 };
 
@@ -39,6 +42,10 @@ export function getExamSettings(): ExamSettings {
         className: parsed.className || DEFAULT_SETTINGS.className,
         subject: parsed.subject || DEFAULT_SETTINGS.subject,
         topic: DEFAULT_SETTINGS.topic, // use latest topic
+        sheetWebhookUrl:
+          parsed.sheetWebhookUrl && parsed.sheetWebhookUrl.trim() !== ''
+            ? parsed.sheetWebhookUrl
+            : DEFAULT_WEBHOOK_URL,
         kktp: parsed.kktp ?? DEFAULT_SETTINGS.kktp,
       };
     }
@@ -241,7 +248,7 @@ export async function saveExamResult(result: ExamResultData): Promise<ExamResult
 
   if (settings.sheetWebhookUrl && settings.sheetWebhookUrl.trim().startsWith('http')) {
     try {
-      sentToSheet = await sendToGoogleSheetWebhook(settings.sheetWebhookUrl, result);
+      sentToSheet = await sendToGoogleSheetWebhook(settings.sheetWebhookUrl, result, settings);
     } catch (err) {
       console.warn('Webhook auto-sync failed, saved locally:', err);
     }
@@ -286,12 +293,20 @@ export function resetToSampleResults(): ExamResultData[] {
 /**
  * Sends a result payload to Google Sheets Web App (Google Apps Script)
  */
-export async function sendToGoogleSheetWebhook(webhookUrl: string, result: ExamResultData): Promise<boolean> {
+export async function sendToGoogleSheetWebhook(
+  webhookUrl: string,
+  result: ExamResultData,
+  settingsParam?: ExamSettings
+): Promise<boolean> {
+  const currentSettings = settingsParam || getExamSettings();
   const payload = {
     timestamp: result.formattedDate || new Date().toLocaleString('id-ID'),
     isoTimestamp: result.timestamp,
+    schoolName: currentSettings.schoolName,
+    subject: currentSettings.subject,
+    topic: currentSettings.topic,
+    className: result.student.className || currentSettings.className,
     fullName: result.student.fullName,
-    className: result.student.className,
     absenceNumber: result.student.absenceNumber,
     correctCount: result.correctCount,
     partialCount: result.partialCount || 0,
@@ -402,11 +417,11 @@ export function downloadMatrixItemAnalysisCSV(
     correctCounts.push(String(correctCount));
     percentPasses.push(`${percent}%`);
 
-    // Klasifikasi empiris sesuai kriteria prompt:
-    // Mudah: > 70%, Sedang: 10 - 25% (atau 25 - 70%), Sukar: < 10%
+    // Klasifikasi empiris sesuai kriteria Kurikulum Merdeka:
+    // Mudah: > 70%, Sedang: 30 - 70%, Sukar: < 30%
     let diff = 'Sedang';
     if (percent > 70) diff = 'Mudah';
-    else if (percent < 25) diff = 'Sukar';
+    else if (percent < 30) diff = 'Sukar';
     difficultyEmpirical.push(diff);
   });
 
@@ -445,51 +460,92 @@ export function downloadMatrixItemAnalysisCSV(
 }
 
 /**
- * Sample Google Apps Script code for teacher setup in Google Sheets
+ * Sample Google Apps Script code for multi-subject teacher setup in ONE Google Sheets
  */
 export const GOOGLE_APPS_SCRIPT_SAMPLE = `function doPost(e) {
   try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    
-    // Buat header jika sheet masih kosong
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow([
-        "Timestamp",
-        "Nama Siswa",
-        "Kelas",
-        "Nomor Absen",
-        "Jumlah Benar",
-        "Sebagian Benar",
-        "Jumlah Salah",
-        "Total Soal",
-        "Nilai Akhir",
-        "Durasi Pengerjaan",
-        "Status Ketercapaian (KKTP 70)",
-        "Rincian PG (20)",
-        "Rincian PGK Kategori (10)"
-      ]);
-      sheet.getRange(1, 1, 1, 13).setFontWeight("bold").setBackground("#e2e8f0");
-    }
-
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
     var data = JSON.parse(e.postData.contents);
 
+    // 1. Ambil nama mata pelajaran (contoh: "IPAS", "Matematika", "Bahasa_Indonesia")
+    var rawSubject = data.subject || "Lainnya";
+    var sheetName = rawSubject.replace(/[/\\\\?*:\\[\\]]/g, "_").trim().substring(0, 30);
+    
+    // 2. Cari tab sesuai nama mata pelajaran. Jika belum ada, buat otomatis!
+    var sheet = ss.getSheetByName(sheetName);
+    if (!sheet) {
+      sheet = ss.insertSheet(sheetName);
+    }
+
+    // 3. Jika tab mapel ini masih baru (baris 0), buat header yang rapi
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        "Waktu & Tanggal",
+        "Mata Pelajaran",
+        "Materi Pokok",
+        "Kelas",
+        "No. Absen",
+        "Nama Siswa",
+        "Benar Penuh",
+        "Benar Sebagian",
+        "Salah",
+        "Total Soal",
+        "Nilai Akhir",
+        "Status KKTP",
+        "Durasi",
+        "Rincian PG",
+        "Rincian Kategori"
+      ]);
+      var headerRange = sheet.getRange(1, 1, 1, 15);
+      headerRange.setFontWeight("bold")
+                 .setBackground("#1e3a8a")
+                 .setFontColor("#ffffff")
+                 .setHorizontalAlignment("center");
+      sheet.setFrozenRows(1);
+    }
+
+    // 4. Masukkan baris data nilai siswa ke tab mapel bersangkutan
     sheet.appendRow([
-      data.timestamp || new Date(),
-      data.fullName,
-      data.className,
-      data.absenceNumber,
-      data.correctCount,
+      data.timestamp || new Date().toLocaleString('id-ID'),
+      data.subject || "-",
+      data.topic || "-",
+      data.className || "-",
+      data.absenceNumber || "-",
+      data.fullName || "-",
+      data.correctCount || 0,
       data.partialCount || 0,
-      data.incorrectCount,
-      data.totalQuestions,
-      data.score,
+      data.incorrectCount || 0,
+      data.totalQuestions || 0,
+      data.score || 0,
+      data.status || "-",
       data.duration || "-",
-      data.status,
-      data.pgScore,
-      data.kategoriScore
+      data.pgScore || "-",
+      data.kategoriScore || "-"
     ]);
 
-    return ContentService.createTextOutput(JSON.stringify({ result: "success" }))
+    // 5. Opsi Tambahan: Catat juga ke tab ringkasan "SEMUA_MAPEL"
+    var masterSheet = ss.getSheetByName("SEMUA_MAPEL");
+    if (!masterSheet) {
+      masterSheet = ss.insertSheet("SEMUA_MAPEL", 0);
+      masterSheet.appendRow([
+        "Waktu", "Mata Pelajaran", "Materi", "Kelas", "No. Absen", "Nama Siswa", "Nilai Akhir", "Status", "Durasi"
+      ]);
+      masterSheet.getRange(1, 1, 1, 9).setFontWeight("bold").setBackground("#0f172a").setFontColor("#ffffff");
+      masterSheet.setFrozenRows(1);
+    }
+    masterSheet.appendRow([
+      data.timestamp || new Date().toLocaleString('id-ID'),
+      data.subject || "-",
+      data.topic || "-",
+      data.className || "-",
+      data.absenceNumber || "-",
+      data.fullName || "-",
+      data.score || 0,
+      data.status || "-",
+      data.duration || "-"
+    ]);
+
+    return ContentService.createTextOutput(JSON.stringify({ result: "success", sheet: sheetName }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
     return ContentService.createTextOutput(JSON.stringify({ result: "error", error: err.toString() }))
