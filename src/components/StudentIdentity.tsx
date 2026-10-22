@@ -72,7 +72,7 @@ export const StudentIdentity: React.FC<StudentIdentityProps> = ({
             <div className="mt-6 pt-6 border-t border-blue-700/50 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div className="bg-blue-900/50 p-2.5 rounded-xl border border-blue-700/40">
                 <span className="text-blue-300 block">Total Soal</span>
-                <strong className="text-white text-base">30 Butir</strong>
+                <strong className="text-white text-base">40 Butir</strong>
               </div>
               <div className="bg-blue-900/50 p-2.5 rounded-xl border border-blue-700/40">
                 <span className="text-blue-300 block">Kriteria KKTP</span>
@@ -200,13 +200,13 @@ export const StudentIdentity: React.FC<StudentIdentityProps> = ({
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
               <h3 className="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
                 <HelpCircle className="w-5 h-5 text-blue-600" />
-                Rincian Soal Tes (30 Butir)
+                Rincian Soal Tes (40 Butir)
               </h3>
 
               <div className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
                   <span className="font-medium">1. Pilihan Ganda (PG)</span>
-                  <span className="font-bold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800">20 Soal</span>
+                  <span className="font-bold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800">30 Soal</span>
                 </div>
                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
                   <span className="font-medium">2. PG Kompleks Kategori (3 Pernyataan Benar/Salah)</span>

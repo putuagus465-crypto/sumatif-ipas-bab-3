@@ -114,7 +114,7 @@ export const PrintExamSheet: React.FC<PrintExamSheetProps> = ({
           {/* BAGIAN I: PILIHAN GANDA (20 SOAL) */}
           <div>
             <div className="bg-slate-200 px-3 py-1.5 font-bold uppercase tracking-wider text-xs mb-4 rounded-md">
-              Bagian I. Pilihan Ganda (Nomor 1 s.d. 20)
+              Bagian I. Pilihan Ganda (Nomor 1 s.d. {pgQuestions.length})
             </div>
             <p className="text-xs italic text-slate-600 mb-3">
               Petunjuk: Pilihlah salah satu jawaban yang paling tepat dengan memberi tanda silang (X) pada opsi A, B, C, atau D!
@@ -180,7 +180,7 @@ export const PrintExamSheet: React.FC<PrintExamSheetProps> = ({
           {/* BAGIAN II: PILIHAN GANDA KOMPLEKS KATEGORI (10 SOAL) */}
           <div className="pt-4">
             <div className="bg-slate-200 px-3 py-1.5 font-bold uppercase tracking-wider text-xs mb-4 rounded-md">
-              Bagian II. Pilihan Ganda Kompleks Kategori (Nomor 21 s.d. 30)
+              Bagian II. Pilihan Ganda Kompleks Kategori (Nomor {pgQuestions.length + 1} s.d. {questions.length})
             </div>
             <p className="text-xs italic text-slate-600 mb-3">
               Petunjuk: Bacalah setiap pernyataan di bawah ini dengan seksama. Berikan tanda centang (✓) pada kolom <strong>Benar</strong> jika pernyataan sesuai, atau kolom <strong>Salah</strong> jika pernyataan tidak sesuai!

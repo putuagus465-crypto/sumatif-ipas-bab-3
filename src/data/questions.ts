@@ -183,6 +183,108 @@ const SVG_ICONS = {
         <text x="62.5" y="82" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Cahaya &amp; udara segar</text>
       </g>
     </svg>
+  `)}`,
+
+  // Kurva Kecepatan Laju Pertumbuhan Fisik Manusia per Tahapan Usia
+  grafikPertumbuhan: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" width="100%" height="100%">
+      <rect width="560" height="200" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <text x="280" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Kurva Kecepatan Laju Pertumbuhan Fisik Manusia per Tahapan</text>
+      
+      <line x1="50" y1="160" x2="520" y2="160" stroke="#64748b" stroke-width="2"/>
+      <line x1="50" y1="40" x2="50" y2="160" stroke="#64748b" stroke-width="2"/>
+      
+      <text x="42" y="50" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="end">Cepat</text>
+      <text x="42" y="160" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="end">0</text>
+      
+      <text x="90" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">Bayi</text>
+      <text x="170" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#16a34a" text-anchor="middle">Balita</text>
+      <text x="255" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#d97706" text-anchor="middle">Anak-anak</text>
+      <text x="345" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#9333ea" text-anchor="middle">Remaja</text>
+      <text x="430" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ea580c" text-anchor="middle">Dewasa</text>
+      <text x="495" y="175" font-family="sans-serif" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle">Lansia</text>
+      
+      <path d="M 50 150 Q 80 80, 100 85 T 190 120 T 260 115 Q 310 65, 345 60 T 430 110 T 490 145 T 520 155" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+      
+      <circle cx="95" cy="83" r="5" fill="#3b82f6"/>
+      <text x="95" y="70" font-family="sans-serif" font-size="9" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Lonjakan 1 (Bayi)</text>
+      
+      <circle cx="345" cy="60" r="5.5" fill="#a855f7"/>
+      <rect x="285" y="36" width="120" height="20" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="345" y="50" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#6b21a8" text-anchor="middle">Growth Spurt (Pesat II)</text>
+      
+      <circle cx="430" cy="110" r="4" fill="#f97316"/>
+      <text x="430" y="100" font-family="sans-serif" font-size="8.5" fill="#c2410c" text-anchor="middle">Tinggi Tetap</text>
+      
+      <circle cx="495" cy="145" r="4" fill="#64748b"/>
+      <text x="495" y="137" font-family="sans-serif" font-size="8.5" fill="#475569" text-anchor="middle">Penurunan</text>
+    </svg>
+  `)}`,
+
+  // Tabel Perbandingan Konsep Pertumbuhan vs Perkembangan
+  tabelTumbuhKembang: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%">
+      <rect width="540" height="180" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+      <text x="270" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">Perbandingan Konsep: Pertumbuhan vs Perkembangan</text>
+      
+      <g transform="translate(20, 38)">
+        <rect width="240" height="125" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="120" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">📏 PERTUMBUHAN</text>
+        <line x1="15" y1="34" x2="225" y2="34" stroke="#bfdbfe" stroke-width="1.5"/>
+        <text x="25" y="52" font-family="sans-serif" font-size="10" fill="#1e3a8a">• Bersifat Kuantitatif (Dapat dihitung)</text>
+        <text x="25" y="70" font-family="sans-serif" font-size="10" fill="#1e3a8a">• Bertambah tinggi badan (cm)</text>
+        <text x="25" y="88" font-family="sans-serif" font-size="10" fill="#1e3a8a">• Bertambah berat badan (kg)</text>
+        <text x="25" y="106" font-family="sans-serif" font-size="10" fill="#1e3a8a">• Bertambah ukuran lingkar kepala &amp; sepatu</text>
+      </g>
+      
+      <g transform="translate(280, 38)">
+        <rect width="240" height="125" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="120" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#15803d" text-anchor="middle">🧠 PERKEMBANGAN</text>
+        <line x1="15" y1="34" x2="225" y2="34" stroke="#bbf7d0" stroke-width="1.5"/>
+        <text x="25" y="52" font-family="sans-serif" font-size="10" fill="#14532d">• Bersifat Kualitatif (Peningkatan fungsi)</text>
+        <text x="25" y="70" font-family="sans-serif" font-size="10" fill="#14532d">• Kematangan organ dan otot gerak</text>
+        <text x="25" y="88" font-family="sans-serif" font-size="10" fill="#14532d">• Kemampuan berbicara &amp; merangkak</text>
+        <text x="25" y="106" font-family="sans-serif" font-size="10" fill="#14532d">• Perkembangan emosi, nalar, &amp; mandiri</text>
+      </g>
+    </svg>
+  `)}`,
+
+  // Kartu Menuju Sehat (KMS) Balita
+  kmsBalita: `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 200" width="100%" height="100%">
+      <rect width="540" height="200" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+      <text x="270" y="22" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Kartu Menuju Sehat (KMS) - Pemantauan Berat Badan Balita</text>
+      
+      <rect x="50" y="40" width="450" height="25" fill="#fef9c3"/>
+      <rect x="50" y="65" width="450" height="35" fill="#dcfce7"/>
+      <rect x="50" y="100" width="450" height="40" fill="#bbf7d0"/>
+      <rect x="50" y="140" width="450" height="25" fill="#fee2e2"/>
+      
+      <text x="505" y="55" font-family="sans-serif" font-size="9" fill="#854d0e">Lebih</text>
+      <text x="505" y="85" font-family="sans-serif" font-size="9" font-weight="bold" fill="#166534">Normal (Pita Hijau)</text>
+      <text x="505" y="155" font-family="sans-serif" font-size="9" font-weight="bold" fill="#b91c1c">Kurang</text>
+      
+      <line x1="80" y1="40" x2="80" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="80" y="180" font-family="sans-serif" font-size="10" fill="#475569" text-anchor="middle">Okt</text>
+      <line x1="160" y1="40" x2="160" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="160" y="180" font-family="sans-serif" font-size="10" fill="#475569" text-anchor="middle">Nov</text>
+      <line x1="240" y1="40" x2="240" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="240" y="180" font-family="sans-serif" font-size="10" fill="#475569" text-anchor="middle">Des</text>
+      <line x1="320" y1="40" x2="320" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="320" y="180" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">Jan (11 kg)</text>
+      <line x1="400" y1="40" x2="400" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="400" y="180" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">Feb (11 kg)</text>
+      <line x1="480" y1="40" x2="480" y2="165" stroke="#94a3b8" stroke-dasharray="2,2"/>
+      <text x="480" y="180" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">Mar (10.8 kg)</text>
+      
+      <path d="M 80 120 L 160 105 L 240 90" fill="none" stroke="#16a34a" stroke-width="3"/>
+      <path d="M 240 90 L 320 100 L 400 100 L 480 125" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="4,2"/>
+      
+      <circle cx="320" cy="100" r="4.5" fill="#dc2626"/>
+      <circle cx="400" cy="100" r="4.5" fill="#dc2626"/>
+      <circle cx="480" cy="125" r="5" fill="#dc2626"/>
+      <text x="400" y="145" font-family="sans-serif" font-size="9" font-weight="bold" fill="#b91c1c" text-anchor="middle">⚠️ Garis Mendatar &amp; Menurun (T)</text>
+    </svg>
   `)}`
 };
 
@@ -605,14 +707,264 @@ export const INITIAL_QUESTIONS: Question[] = [
   },
 
   // =========================================================================
-  // BAGIAN 2: PILIHAN GANDA KOMPLEKS KATEGORI (10 SOAL: NOMOR 21 s.d. 30)
+  // TAMBAHAN 10 SOAL PILIHAN GANDA: MATERI SIKLUS HIDUP MANUSIA (5 SEDANG & 5 SULIT)
+  // =========================================================================
+
+  // Soal 21: Siklus Hidup Manusia (Sedang - L2)
+  {
+    id: 'pg-21',
+    originalNumber: 21,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membedakan konsep pertumbuhan dan perkembangan pada tubuh manusia.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan diagram perbandingan, siswa dapat membedakan peristiwa yang termasuk pertumbuhan (kuantitatif) dan perkembangan (kualitatif).',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
+    scoreWeight: 1,
+    imageUrl: SVG_ICONS.tabelTumbuhKembang,
+    imageCaption: 'Perbandingan Konsep Pertumbuhan dan Perkembangan Manusia',
+    question: 'Perhatikan diagram perbandingan antara "Pertumbuhan" dan "Perkembangan" di atas! Manakah di antara peristiwa berikut ini yang merupakan contoh proses perkembangan pada manusia?',
+    options: [
+      'Tinggi badan Made bertambah dari 115 cm menjadi 122 cm saat naik ke kelas 3',
+      'Berat badan seorang balita bertambah dari 9 kg menjadi 12 kg dalam setahun',
+      'Adik bayi yang awalnya hanya bisa menangis kini mulai mampu mengucapkan kata "Ibu" dan belajar merangkak',
+      'Ukuran sepatu yang dipakai Wayan berganti dari nomor 30 menjadi nomor 32'
+    ],
+    correctAnswer: 2,
+    explanation: 'Pertumbuhan bersifat kuantitatif (dapat diukur dengan angka, seperti tinggi, berat, dan ukuran sepatu). Sedangkan perkembangan bersifat kualitatif (peningkatan kematangan fungsi organ tubuh, kecerdasan, dan keterampilan, seperti kemampuan berbicara dan merangkak).'
+  },
+
+  // Soal 22: Siklus Hidup Manusia (Sedang - L2)
+  {
+    id: 'pg-22',
+    originalNumber: 22,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi ciri perubahan fisik pada masa peralihan balita ke anak-anak.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Siswa dapat menjelaskan proses pergantian gigi susu menjadi gigi permanen pada masa anak-anak usia sekolah dasar.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
+    scoreWeight: 1,
+    question: 'Pada saat anak-anak menginjak usia 6 sampai 7 tahun (seperti saat masuk sekolah dasar), terjadi perubahan alami pada mulut berupa gigi susu yang tanggal. Penjelasan ilmiah yang tepat mengenai peristiwa ini adalah ...',
+    options: [
+      'Gigi susu tanggal karena anak terlalu sering makan nasi tanpa sayuran',
+      'Gigi susu tanggal secara alami untuk digantikan oleh gigi tetap (permanen) yang lebih kuat',
+      'Gigi susu tanggal karena anak sudah tidak pernah minum susu lagi',
+      'Setelah gigi susu tanggal, rongga mulut tidak akan pernah ditumbuhi gigi lagi seumur hidup'
+    ],
+    correctAnswer: 1,
+    explanation: 'Pada masa anak-anak (sekitar usia 6-12 tahun), gigi susu akan tanggal satu per satu secara bertahap dan digantikan oleh gigi tetap (permanen) yang berfungsi mendukung pengunyahan makanan yang lebih beragam seiring pertumbuhan tubuh.'
+  },
+
+  // Soal 23: Siklus Hidup Manusia (Sedang - L2)
+  {
+    id: 'pg-23',
+    originalNumber: 23,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengidentifikasi faktor lingkungan yang mendukung pertumbuhan dan perkembangan optimal anak.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan situasi keseharian anak kembar, siswa dapat menentukan faktor lingkungan yang paling mempengaruhi optimalitas pertumbuhan fisik.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
+    scoreWeight: 1,
+    question: 'Dua orang anak kembar memiliki faktor keturunan yang sama. Namun anak pertama rajin makan makanan bergizi seimbang, rutin berolahraga lari, dan tidur 9 jam setiap malam. Sedangkan anak kedua sering begadang bermain gawai dan hanya makan makanan cepat saji. Prediksi yang paling tepat mengenai kondisi kedua anak tersebut adalah ...',
+    options: [
+      'Kedua anak akan tetap memiliki tinggi badan dan kebugaran yang persis sama tanpa terpengaruh kebiasaan hidup',
+      'Anak pertama akan tumbuh lebih optimal, memiliki tulang lebih kuat, dan daya tahan tubuh lebih baik dibandingkan anak kedua',
+      'Anak kedua akan memiliki daya tahan tubuh yang jauh lebih kebal terhadap kuman penyakit',
+      'Makanan dan waktu tidur sama sekali tidak mempengaruhi laju pertumbuhan tubuh anak'
+    ],
+    correctAnswer: 1,
+    explanation: 'Meskipun faktor genetik (keturunan) berperan, faktor lingkungan seperti asupan nutrisi bergizi seimbang, olahraga teratur, dan tidur cukup sangat menentukan optimalnya proses pertumbuhan tulang dan daya tahan tubuh anak.'
+  },
+
+  // Soal 24: Siklus Hidup Manusia (Sedang - L2)
+  {
+    id: 'pg-24',
+    originalNumber: 24,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membaca dan menafsirkan grafik tahapan pertumbuhan manusia dari bayi hingga lansia.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan grafik tahapan laju pertumbuhan, siswa dapat menentukan fase lonjakan pertumbuhan paling pesat kedua (growth spurt).',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
+    scoreWeight: 1,
+    imageUrl: SVG_ICONS.grafikPertumbuhan,
+    imageCaption: 'Grafik Laju Kecepatan Pertumbuhan Fisik Manusia',
+    question: 'Perhatikan grafik laju pertumbuhan manusia di atas! Setelah melewati masa anak-anak yang pertumbuhannya teratur, tubuh manusia akan mengalami lonjakan pertumbuhan fisik yang sangat pesat kedua (growth spurt) yang terjadi pada tahapan ...',
+    options: [
+      'Masa Bayi (0 - 1 tahun)',
+      'Masa Remaja / Pubertas (12 - 18 tahun)',
+      'Masa Dewasa (20 - 55 tahun)',
+      'Masa Lanjut Usia (>= 60 tahun)'
+    ],
+    correctAnswer: 1,
+    explanation: 'Pada masa remaja terjadi masa pubertas yang ditandai dengan percepatan pertumbuhan fisik kedua (growth spurt), di mana tinggi badan dan berat badan bertambah secara signifikan dalam waktu relatif singkat.'
+  },
+
+  // Soal 25: Siklus Hidup Manusia (Sedang - L2)
+  {
+    id: 'pg-25',
+    originalNumber: 25,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis karakteristik kematangan fisik dan sosial pada masa dewasa.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Siswa dapat mengidentifikasi ciri utama masa dewasa terkait penghentian pertambahan tinggi badan dan kemandirian tanggung jawab.',
+    cognitiveLevel: 'L2',
+    difficulty: 'Sedang',
+    scoreWeight: 1,
+    question: 'Seseorang yang telah memasuki tahap dewasa (usia sekitar 20 sampai 55 tahun) memiliki karakteristik fisik dan sosial yang khas, yaitu ...',
+    options: [
+      'Tinggi badan masih terus bertambah tinggi hingga mencapai lebih dari 3 meter',
+      'Pertumbuhan tinggi badan telah berhenti, organ tubuh matang sempurna, dan mulai mandiri memikul tanggung jawab pekerjaan serta keluarga',
+      'Seluruh giginya tanggal dan daya ingatnya langsung menghilang sepenuhnya',
+      'Belum mampu makan dan mengenakan pakaian sendiri sehingga harus disuapi orang tua'
+    ],
+    correctAnswer: 1,
+    explanation: 'Pada tahap dewasa, lempeng pertumbuhan tulang telah menutup sehingga pertambahan tinggi badan berhenti, organ fisik telah berfungsi maksimal, dan individu memiliki kematangan emosional untuk bekerja serta bertanggung jawab mandiri.'
+  },
+
+  // Soal 26: Siklus Hidup Manusia (Sukar / Sulit - L3 HOTS)
+  {
+    id: 'pg-26',
+    originalNumber: 26,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis dampak kekurangan gizi kronis pada masa awal kehidupan terhadap pertumbuhan dan perkembangan kognitif.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan studi kasus pertumbuhan balita, siswa dapat mengevaluasi dampak jangka panjang stunting terhadap perkembangan kecerdasan otak.',
+    cognitiveLevel: 'L3',
+    difficulty: 'Sukar',
+    scoreWeight: 1,
+    question: 'Pada pemeriksaan kesehatan anak balita di posyandu, seorang balita berusia 3 tahun mengalami gagal tumbuh (stunting) karena kekurangan asupan gizi seimbang sejak masa bayi. Berdasarkan pemahaman siklus tumbuh kembang manusia, dampak jangka panjang yang paling berbahaya dari stunting apabila tidak dicegah sejak dini adalah ...',
+    options: [
+      'Anak akan memiliki warna rambut yang berubah-ubah setiap minggu',
+      'Perkembangan sel-sel otak dan kecerdasan anak terhambat secara permanen sehingga mengalami kesulitan belajar di masa depan',
+      'Gigi susu anak tidak akan pernah bisa copot atau tanggal selamanya',
+      'Anak akan berubah menjadi manusia raksasa saat dewasa nanti'
+    ],
+    correctAnswer: 1,
+    explanation: 'Stunting terjadi akibat kekurangan gizi kronis pada 1.000 Hari Pertama Kehidupan (HPK). Dampaknya tidak hanya tubuh yang pendek, tetapi juga terhambatnya perkembangan jaringan otak yang menyebabkan penurunan kemampuan kognitif dan prestasi belajar secara permanen.'
+  },
+
+  // Soal 27: Siklus Hidup Manusia (Sukar / Sulit - L3 HOTS)
+  {
+    id: 'pg-27',
+    originalNumber: 27,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik membandingkan arah biologis antara fase pubertas (remaja) dan fase lanjut usia (lansia).',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan tabel fenomena biologis dua fase kehidupan manusia, siswa dapat menganalisis perbedaan mendasar antara fase pematangan fisik dan fase degenerasi organ.',
+    cognitiveLevel: 'L3',
+    difficulty: 'Sukar',
+    scoreWeight: 1,
+    question: 'Perhatikan perbandingan fenomena dua fase kehidupan manusia berikut:\n• Fase X: Suara membesar (pada laki-laki), tumbuh jerawat, hormon reproduksi aktif, dan energi fisik bertambah pesat.\n• Fase Y: Pendengaran dan penglihatan mulai berkurang, rambut memutih, kulit berkerut, serta kepadatan tulang menurun.\nKesimpulan ilmiah yang paling tepat mengenai Fase X dan Fase Y adalah ...',
+    options: [
+      'Fase X adalah masa Bayi, sedangkan Fase Y adalah masa Anak-anak',
+      'Fase X adalah masa Pubertas (Remaja) yang mengalami pematangan biologis, sedangkan Fase Y adalah masa Lanjut Usia (Lansia) yang mengalami penurunan fungsi organ secara alami',
+      'Fase X dan Fase Y merupakan fase yang dialami manusia pada waktu yang bersamaan di usia 5 tahun',
+      'Fase X terjadi karena kekurangan vitamin, sedangkan Fase Y terjadi akibat terlalu sering berolahraga'
+    ],
+    correctAnswer: 1,
+    explanation: 'Fase X mencerminkan perubahan sekunder masa pubertas pada remaja akibat peningkatan hormon reproduksi. Sebaliknya, Fase Y mencerminkan proses penuaan biologis pada lansia di mana laju regenerasi sel melambat sehingga fungsi panca indra dan kekuatan tulang menurun.'
+  },
+
+  // Soal 28: Siklus Hidup Manusia (Sukar / Sulit - L3 HOTS)
+  {
+    id: 'pg-28',
+    originalNumber: 28,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menganalisis hubungan antara siklus tidur nyenyak dengan kerja hormon pertumbuhan (growth hormone).',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Siswa dapat menjelaskan mekanisme fisiologis mengapa kebiasaan tidur teratur dan cukup sangat menentukan pertumbuhan tinggi badan anak-anak.',
+    cognitiveLevel: 'L3',
+    difficulty: 'Sukar',
+    scoreWeight: 1,
+    question: 'Dokter anak selalu menyarankan agar siswa sekolah dasar tidak tidur larut malam dan mendapatkan tidur nyenyak selama 8 hingga 10 jam. Berdasarkan kajian ilmu sains tentang siklus pertumbuhan manusia, alasan biologis paling mendasar dari anjuran tersebut adalah ...',
+    options: [
+      'Agar lampu kamar tidur tidak boros menggunakan energi listrik sepanjang malam',
+      'Hormon pertumbuhan (Human Growth Hormone) diproduksi dan dilepaskan paling banyak oleh tubuh saat anak-anak berada dalam fase tidur lelap (nyenyak) pada malam hari',
+      'Tubuh manusia hanya dapat mencerna makanan ketika kedua kelopak mata dalam keadaan terpejam',
+      'Tidur larut malam akan membuat warna kulit anak berubah menjadi kebiruan'
+    ],
+    correctAnswer: 1,
+    explanation: 'Hormon pertumbuhan (HGH) dilepaskan secara maksimal ke aliran darah oleh kelenjar pituitari pada saat anak mencapai fase tidur nyenyak (deep sleep/gelombang lambat). Anak yang kurang tidur kronis berisiko mengalami keterlambatan pertumbuhan tinggi badan.'
+  },
+
+  // Soal 29: Siklus Hidup Manusia (Sukar / Sulit - L3 HOTS)
+  {
+    id: 'pg-29',
+    originalNumber: 29,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik menafsirkan data tren kurva pertumbuhan pada Kartu Menuju Sehat (KMS).',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Disajikan grafik kurva KMS balita selama 3 bulan berturut-turut, siswa dapat mengevaluasi status pertumbuhan dan merekomendasikan tindakan yang tepat.',
+    cognitiveLevel: 'L3',
+    difficulty: 'Sukar',
+    scoreWeight: 1,
+    imageUrl: SVG_ICONS.kmsBalita,
+    imageCaption: 'Pencatatan Kurva Berat Badan pada Kartu Menuju Sehat (KMS)',
+    question: 'Perhatikan grafik Kartu Menuju Sehat (KMS) seorang balita usia 2 tahun di atas! Selama tiga bulan berturut-turut (Bulan Januari: 11 kg, Februari: 11 kg, Maret: 10,8 kg), titik berat badan balita tersebut mendatar lalu menurun menjauhi pita hijau normal. Analisis kesimpulan dan langkah tindakan yang paling tepat untuk dilakukan orang tua adalah ...',
+    options: [
+      'Kondisi tersebut sangat normal dan orang tua tidak perlu berbuat apa-apa karena balita pasti akan bertambah gemuk dengan sendirinya',
+      'Terjadi indikasi gangguan pertumbuhan (garis berat badan tidak naik/T), sehingga orang tua harus segera memeriksakan balita ke Puskesmas untuk evaluasi asupan gizi dan penanganan medis',
+      'Balita tersebut sebaiknya dipuasakan makan dan hanya diberi minum air putih saja sepanjang hari',
+      'Mengganti timbangan di posyandu dengan timbangan yang rusak agar jarumnya terlihat naik'
+    ],
+    correctAnswer: 1,
+    explanation: 'Pada kurva KMS, anak sehat ditandai dengan garis berat badan yang terus naik mengikuti pita hijau (N). Jika garis pertumbuhan mendatar atau menurun selama 2-3 bulan (T = Tidak Naik), ini merupakan tanda bahaya pertumbuhan (growth faltering) yang harus segera diperiksa ke fasilitas kesehatan untuk mencegah malnutrisi.'
+  },
+
+  // Soal 30: Siklus Hidup Manusia (Sukar / Sulit - L3 HOTS)
+  {
+    id: 'pg-30',
+    originalNumber: 30,
+    type: 'pilihan_ganda',
+    category: 'Siklus Hidup Manusia',
+    elemen: 'Pemahaman IPAS',
+    capaianPembelajaran: 'Peserta didik mengevaluasi hubungan sebab-akibat antara pola hidup masa muda dengan kesehatan masa lansia.',
+    tujuanPembelajaran: TP_SIKLUS,
+    indikator: 'Siswa dapat menganalisis bagaimana kebiasaan mengonsumsi kalsium, vitamin D, dan berolahraga di masa muda mencegah pengeroposan tulang (osteoporosis) di masa lanjut usia.',
+    cognitiveLevel: 'L3',
+    difficulty: 'Sukar',
+    scoreWeight: 1,
+    question: 'Seorang kakek berusia 68 tahun tetap memiliki postur tubuh tegak, tulang yang kuat, dan jarang merasa nyeri sendi. Dokter menjelaskan bahwa kondisi ini merupakan hasil dari "investasi kesehatan masa muda" sang kakek. Maksud dari penjelasan dokter tersebut dalam konsep siklus hidup manusia adalah ...',
+    options: [
+      'Kakek tersebut menyimpan banyak tabungan uang di bank sejak masih anak-anak',
+      'Kepadatan tulang manusia dibentuk paling maksimal pada masa anak-anak dan remaja; kebiasaan minum susu tinggi kalsium serta aktif berolahraga di masa muda mencegah pengeroposan tulang saat memasuki usia lansia',
+      'Kakek tidak pernah melakukan aktivitas fisik apa pun sejak kecil sehingga tulangnya masih seperti baru',
+      'Penuaan fisik hanya terjadi pada orang yang tidak memiliki pekerjaan tetap'
+    ],
+    correctAnswer: 1,
+    explanation: 'Puncak massa tulang (peak bone mass) dicapai pada masa akhir remaja hingga awal dewasa. Kebiasaan makan bergizi tinggi kalsium, mendapatkan vitamin D sinar matahari pagi, dan rutin bergerak di masa anak-anak menjadi bekal utama mencegah osteoporosis ketika proses penuaan terjadi di masa lanjut usia.'
+  },
+
+  // =========================================================================
+  // BAGIAN 2: PILIHAN GANDA KOMPLEKS KATEGORI (10 SOAL: NOMOR 31 s.d. 40)
   // Setiap butir memuat tepat 3 deskripsi/pernyataan yang harus direspons Benar atau Salah!
   // =========================================================================
 
-  // Soal 21: Siklus Hidup Manusia (Bayi dan Balita)
+  // Soal 31: Siklus Hidup Manusia (Bayi dan Balita)
   {
-    id: 'pgk-21',
-    originalNumber: 21,
+    id: 'pgk-31',
+    originalNumber: 31,
     type: 'kategori',
     category: 'Siklus Hidup Manusia',
     elemen: 'Pemahaman IPAS',
@@ -629,27 +981,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-21-1',
+        id: 'st-31-1',
         text: 'Bayi yang baru lahir sangat bergantung pada orang tua untuk makan dan belum mampu berjalan sendiri.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-21-2',
+        id: 'st-31-2',
         text: 'Pada masa balita (usia 1 sampai 5 tahun), anak mulai belajar berjalan, berlari kecil, dan berbicara kata-kata sederhana.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-21-3',
+        id: 'st-31-3',
         text: 'Bayi yang baru berusia 2 bulan sudah dapat langsung disuruh menyiapkan pakaian dan seragam sekolahnya sendiri.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 22: Siklus Hidup Manusia (Anak-anak dan Remaja)
+  // Soal 32: Siklus Hidup Manusia (Anak-anak dan Remaja)
   {
-    id: 'pgk-22',
-    originalNumber: 22,
+    id: 'pgk-32',
+    originalNumber: 32,
     type: 'kategori',
     category: 'Siklus Hidup Manusia',
     elemen: 'Pemahaman IPAS',
@@ -664,27 +1016,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-22-1',
+        id: 'st-32-1',
         text: 'Siswa kelas 3 SD yang berusia sekitar 8 sampai 9 tahun berada pada tahapan masa anak-anak.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-22-2',
+        id: 'st-32-2',
         text: 'Masa remaja merupakan masa peralihan dari anak-anak menuju dewasa yang ditandai dengan perubahan fisik masa pubertas.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-22-3',
+        id: 'st-32-3',
         text: 'Masa remaja dilalui manusia setelah mereka melewati usia lanjut (lansia).',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 23: Siklus Hidup Manusia (Dewasa dan Lanjut Usia)
+  // Soal 33: Siklus Hidup Manusia (Dewasa dan Lanjut Usia)
   {
-    id: 'pgk-23',
-    originalNumber: 23,
+    id: 'pgk-33',
+    originalNumber: 33,
     type: 'kategori',
     category: 'Siklus Hidup Manusia',
     elemen: 'Pemahaman IPAS',
@@ -699,27 +1051,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-23-1',
+        id: 'st-33-1',
         text: 'Pada masa dewasa, manusia umumnya telah memiliki kematangan fisik dan tanggung jawab untuk bekerja mencari nafkah.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-23-2',
+        id: 'st-33-2',
         text: 'Rambut yang memutih (beruban) dan kulit yang mulai keriput adalah ciri fisik yang umum terjadi pada masa lanjut usia (lansia).',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-23-3',
+        id: 'st-33-3',
         text: 'Tinggi badan manusia pada masa lanjut usia akan terus bertambah semakin tinggi melebihi pohon kelapa.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 24: Ragam Ruangan di Rumah (Ruang Tamu, Kamar Tidur, Ruang Makan)
+  // Soal 34: Ragam Ruangan di Rumah (Ruang Tamu, Kamar Tidur, Ruang Makan)
   {
-    id: 'pgk-24',
-    originalNumber: 24,
+    id: 'pgk-34',
+    originalNumber: 34,
     type: 'kategori',
     category: 'Ragam Ruangan di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -736,27 +1088,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-24-1',
+        id: 'st-34-1',
         text: 'Ruang tamu berfungsi sebagai tempat untuk menyambut dan mempersilakan tamu yang berkunjung ke rumah.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-24-2',
+        id: 'st-34-2',
         text: 'Kamar tidur adalah tempat pribadi yang digunakan untuk beristirahat, tidur nyenyak, dan belajar mandiri.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-24-3',
+        id: 'st-34-3',
         text: 'Ruang makan adalah tempat khusus di rumah yang digunakan untuk mencuci pakaian dan memarkir mobil.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 25: Ragam Ruangan di Rumah (Dapur, Kamar Mandi, Garasi)
+  // Soal 35: Ragam Ruangan di Rumah (Dapur, Kamar Mandi, Garasi)
   {
-    id: 'pgk-25',
-    originalNumber: 25,
+    id: 'pgk-35',
+    originalNumber: 35,
     type: 'kategori',
     category: 'Ragam Ruangan di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -771,27 +1123,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-25-1',
+        id: 'st-35-1',
         text: 'Dapur difungsikan sebagai ruangan untuk mengolah bahan makanan dan memasak sajian keluarga.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-25-2',
+        id: 'st-35-2',
         text: 'Garasi digunakan sebagai tempat untuk memarkir serta menyimpan sepeda, sepeda motor, atau mobil agar aman.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-25-3',
+        id: 'st-35-3',
         text: 'Kamar mandi adalah tempat yang tepat untuk menyalakan api unggun dan memasak sayur sop.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 26: Ragam Ruangan di Rumah (Kebersihan & Keselamatan Ruangan)
+  // Soal 36: Ragam Ruangan di Rumah (Kebersihan & Keselamatan Ruangan)
   {
-    id: 'pgk-26',
-    originalNumber: 26,
+    id: 'pgk-36',
+    originalNumber: 36,
     type: 'kategori',
     category: 'Ragam Ruangan di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -808,27 +1160,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-26-1',
+        id: 'st-36-1',
         text: 'Lantai kamar mandi harus rutin disikat agar tidak berlumut licin yang dapat membahayakan anggota keluarga.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-26-2',
+        id: 'st-36-2',
         text: 'Membuka jendela kamar tidur di pagi hari membantu pergantian udara segar dan masuknya sinar matahari yang sehat.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-26-3',
+        id: 'st-36-3',
         text: 'Meninggalkan piring dan gelas kotor menumpuk berhari-hari di dapur adalah cara terbaik menjaga kebersihan rumah.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 27: Peran Anggota Keluarga di Rumah (Tanggung Jawab Ayah dan Ibu)
+  // Soal 37: Peran Anggota Keluarga di Rumah (Tanggung Jawab Ayah dan Ibu)
   {
-    id: 'pgk-27',
-    originalNumber: 27,
+    id: 'pgk-37',
+    originalNumber: 37,
     type: 'kategori',
     category: 'Peran Anggota Keluarga di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -845,27 +1197,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-27-1',
+        id: 'st-37-1',
         text: 'Ayah berperan sebagai kepala keluarga yang bertanggung jawab memimpin, menafkahi, dan melindungi anggota keluarga.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-27-2',
+        id: 'st-37-2',
         text: 'Ibu berperan merawat anak-anak, mengelola kebutuhan rumah tangga, dan mendidik anak dengan penuh kasih sayang.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-27-3',
+        id: 'st-37-3',
         text: 'Ayah dan ibu tidak perlu saling membantu karena tugas di rumah hanya boleh dikerjakan oleh satu orang saja.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 28: Peran Anggota Keluarga di Rumah (Hak & Kewajiban Anak)
+  // Soal 38: Peran Anggota Keluarga di Rumah (Hak & Kewajiban Anak)
   {
-    id: 'pgk-28',
-    originalNumber: 28,
+    id: 'pgk-38',
+    originalNumber: 38,
     type: 'kategori',
     category: 'Peran Anggota Keluarga di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -880,27 +1232,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-28-1',
+        id: 'st-38-1',
         text: 'Belajar dengan tekun dan mematuhi nasehat baik dari orang tua merupakan kewajiban utama seorang anak di rumah.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-28-2',
+        id: 'st-38-2',
         text: 'Membantu menyapu lantai atau mencuci piring sendiri setelah makan adalah wujud bakti anak dalam meringankan tugas orang tua.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-28-3',
+        id: 'st-38-3',
         text: 'Seorang anak memiliki hak untuk membentak orang tua dan menolak mengerjakan pekerjaan sekolah.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 29: Peran Anggota Keluarga di Rumah (Kerjasama & Gotong Royong)
+  // Soal 39: Peran Anggota Keluarga di Rumah (Kerjasama & Gotong Royong)
   {
-    id: 'pgk-29',
-    originalNumber: 29,
+    id: 'pgk-39',
+    originalNumber: 39,
     type: 'kategori',
     category: 'Peran Anggota Keluarga di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -915,27 +1267,27 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-29-1',
+        id: 'st-39-1',
         text: 'Ketika rumah dibersihkan bersama-sama pada hari libur, suasana rumah menjadi bersih dan hubungan antarkeluarga semakin akrab.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-29-2',
+        id: 'st-39-2',
         text: 'Kakak dan adik yang saling tolong-menolong serta tidak bertengkar saat belajar membuat orang tua merasa bahagia.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-29-3',
+        id: 'st-39-3',
         text: 'Menumpuk sampah di halaman depan dan enggan membantu orang tua adalah contoh perilaku terpuji anak di rumah.',
         correctAnswer: 'Salah'
       }
     ]
   },
 
-  // Soal 30: Peran Anggota Keluarga & Kakek Nenek
+  // Soal 40: Peran Anggota Keluarga & Kakek Nenek
   {
-    id: 'pgk-30',
-    originalNumber: 30,
+    id: 'pgk-40',
+    originalNumber: 40,
     type: 'kategori',
     category: 'Peran Anggota Keluarga di Rumah',
     elemen: 'Pemahaman IPAS',
@@ -952,17 +1304,17 @@ export const INITIAL_QUESTIONS: Question[] = [
     categoryType: 'benar_salah',
     statements: [
       {
-        id: 'st-30-1',
+        id: 'st-40-1',
         text: 'Kakek dan nenek berada pada tahap lanjut usia yang perlu disayangi, diperhatikan kesehatannya, dan dihormati oleh cucu-cucunya.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-30-2',
+        id: 'st-40-2',
         text: 'Membantu menuntun kakek berjalan atau mengambilkan air minum adalah contoh tindakan terpuji yang mencerminkan bakti anak.',
         correctAnswer: 'Benar'
       },
       {
-        id: 'st-30-3',
+        id: 'st-40-3',
         text: 'Kakek dan nenek yang sudah lanjut usia sebaiknya dipaksa bekerja mengangkat beban berat di kebun setiap hari.',
         correctAnswer: 'Salah'
       }

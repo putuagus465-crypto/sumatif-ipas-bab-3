@@ -117,7 +117,7 @@ export const PrintResultReport: React.FC<PrintResultReportProps> = ({
         {/* Breakdown Table */}
         <div className="mb-6">
           <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-            Rincian Capaian Butir Soal (Total 30 Butir):
+            Rincian Capaian Butir Soal (Total {result.totalQuestions} Butir):
           </h4>
           <table className="w-full border-collapse border border-black text-xs sm:text-sm">
             <thead>

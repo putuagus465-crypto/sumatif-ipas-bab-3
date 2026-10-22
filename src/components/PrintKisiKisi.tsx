@@ -115,7 +115,7 @@ export const PrintKisiKisi: React.FC<PrintKisiKisiProps> = ({
           <div>
             <div className="grid grid-cols-3 gap-1">
               <span className="text-slate-600 font-medium">Jumlah Butir Soal</span>
-              <span className="col-span-2 font-bold">: {totalQuestions} Butir (20 PG + 10 PGK Kategori)</span>
+              <span className="col-span-2 font-bold">: {totalQuestions} Butir ({pgCount} PG + {kategoriCount} PGK Kategori)</span>
             </div>
             <div className="grid grid-cols-3 gap-1">
               <span className="text-slate-600 font-medium">Alokasi Waktu</span>

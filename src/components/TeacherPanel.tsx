@@ -523,7 +523,7 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
                       <div>
                         <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
                           <BarChart3 className="w-4 h-4 text-blue-700" />
-                          <span>Tabel Matriks Interaktif Respon Siswa (30 Butir Soal)</span>
+                          <span>Tabel Matriks Interaktif Respon Siswa ({questions.length} Butir Soal)</span>
                         </h3>
                         <p className="text-xs text-slate-500 mt-0.5">
                           Klik pada baris nama siswa untuk melihat <strong>Detail Analisis Siswa</strong>, analisis kelemahan indikator, dan rekomendasi remedial.
@@ -577,7 +577,7 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
                         <tbody>
                           {filteredResults.length === 0 ? (
                             <tr>
-                              <td colSpan={36} className="p-8 text-slate-400 text-center font-medium">
+                              <td colSpan={questions.length + 7} className="p-8 text-slate-400 text-center font-medium">
                                 Belum ada data respon siswa yang sesuai filter.
                               </td>
                             </tr>
@@ -839,7 +839,7 @@ export const TeacherPanel: React.FC<TeacherPanelProps> = ({
                   <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
                     <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                       <h4 className="font-bold text-sm text-slate-900">
-                        Daftar Butir Soal &amp; Indikator Kompetensi (1 s.d. 30)
+                        Daftar Butir Soal &amp; Indikator Kompetensi (1 s.d. {questions.length})
                       </h4>
                       <div className="flex items-center gap-2">
                         <button

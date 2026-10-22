@@ -199,11 +199,14 @@ export function getMockInitialResults(questions: Question[] = INITIAL_QUESTIONS)
       passed,
       kktp: 70,
       breakdown: {
-        pg: { correct: evaluations.filter((e) => e.type === 'pilihan_ganda' && e.isCorrect).length, total: 20 },
+        pg: {
+          correct: evaluations.filter((e) => e.type === 'pilihan_ganda' && e.isCorrect).length,
+          total: questions.filter((q) => q.type === 'pilihan_ganda').length,
+        },
         kategori: {
           correct: evaluations.filter((e) => e.type === 'kategori' && e.isCorrect).length,
           partial: evaluations.filter((e) => e.type === 'kategori' && e.isPartial).length,
-          total: 10,
+          total: questions.filter((q) => q.type === 'kategori').length,
         },
       },
       evaluations,
@@ -221,7 +224,10 @@ export function getAllExamResults(): ExamResultData[] {
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed;
+        // If question count updated (e.g., expanded to 40 questions), refresh sample data to stay aligned
+        if (parsed[0].totalQuestions === INITIAL_QUESTIONS.length) {
+          return parsed;
+        }
       }
     }
   } catch (e) {
@@ -368,8 +374,8 @@ export function downloadMatrixItemAnalysisCSV(
       'Nilai Akhir',
       'Status Ketercapaian',
       'Durasi Pengerjaan',
-      'Benar PG (20)',
-      'Benar Penuh PGK (10)',
+      `Benar PG (${questions.filter((q) => q.type === 'pilihan_ganda').length})`,
+      `Benar Penuh PGK (${questions.filter((q) => q.type === 'kategori').length})`,
       'Benar Sebagian PGK',
     ],
   ];
